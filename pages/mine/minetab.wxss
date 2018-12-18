@@ -1,0 +1,81 @@
+/* pages/mine/minetab.wxss */
+.infobox{
+  height:325rpx;
+  width:100%;
+  position:absolute;
+  top:0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ .bg{
+  height:325rpx;
+  width:100%;
+}
+.infobox .photo{
+  width:150rpx;
+  height:150rpx;
+  border-radius:50%;
+  border:5rpx solid white;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.number{
+  color: #292b32;
+  font-size:30rpx;
+  text-align: center;
+}
+.score{
+  color: #666;
+  font-size:22rpx;
+  text-align: center;
+}
+.score text{
+  color: #3093ff;
+  font-size:30rpx;
+  text-align: center;
+  font-weight: 700;
+}
+.NickName{
+  color: #686d74;
+  font-size:22rpx;
+  text-align: center;
+}
+.userinfo{
+  color: #686d74;
+  font-size:22rpx;
+  text-align: center;
+}
+.navlist{
+  padding:0 30rpx;
+}
+.listitem{
+  height:100rpx;
+  border-bottom:solid 1px #d1d1da;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  color: #292b32;
+  font-size:28rpx;
+}
+.icon{
+  width:40rpx;
+  height:80rpx;
+  flex:0 0 auto;
+}
+.next{
+  width:40rpx;
+  height:80rpx;
+  flex:0 0 auto;
+}
+.listitem text{
+  padding-left:10rpx;
+  flex:1 0 auto;
+}
+.version{
+  font-size:24rpx;
+  color: #999999;
+  line-height:70rpx;
+  height:70rpx;
+  text-align: center;
+}

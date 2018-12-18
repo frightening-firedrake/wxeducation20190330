@@ -1,0 +1,25 @@
+<!--pages/studentService/contactIndex/contactIndexDetails/contactIndexDetails.wxml-->
+<view class="pageWrap contactIndexDetails">
+  <view class="title">
+    {{title}}
+  </view>
+  <view class="listWrap">
+    <view class="listRow header">
+      <view class="listcell1">部门</view>
+      <view class="listcell2">电话</view>
+      <view class="listcell3">办公地点</view>
+    </view>
+    <view class="listRow"  wx:for="{{list}}" wx:key="index"  data-id="{{item.id}}">
+      <view class="listcell1">{{item.name}}</view>
+      <view class="listcell2" bindtap="call" data-phone="{{item.phone}}">{{item.phone}}</view>
+      <view class="listcell3">{{item.place}}</view>
+      <view style="clear:both;"></view>
+    </view>
+  </view>
+  <view class="bottommsg">
+    <text class="author">来源：{{author}}</text>
+    <!-- <text class="readingTimes">阅读次数：{{news.hits}}</text> -->
+    <text class="date">发布日期：{{createTime}}</text>
+  </view>
+</view>
+

@@ -1,0 +1,80 @@
+/* 阿里图标样式*/
+/* @import "/static/icon/iconfont.wxss"; */
+/* weui样式*/
+@import "/weui.wxss"; 
+/**app.wxss**/
+/* 通用详情页的样式 */
+.pageWrap.details{
+  padding:25rpx;
+  border-top:1px solid #dce6ec;
+}
+.pageWrap.details .title{
+  font-size:30rpx;
+  color: #333333;
+  text-align: center;
+  line-height:45rpx;
+  font-weight: 700;
+}
+.pageWrap.details .content{
+  font-size:30rpx;
+  color: #333333;
+  line-height:45rpx;
+}
+.pageWrap.details .content{
+  font-size:30rpx;
+  color: #333333;
+  line-height:45rpx;
+}
+.pageWrap.contactIndexDetails .bottommsg{
+  height:50rpx;
+  border-top:1px dotted #939393;
+  font-size:20rpx;
+  color: #666666;
+  display: flex;
+  line-height:50rpx;
+  margin-top:70rpx;
+}
+.pageWrap.contactIndexDetails .bottommsg .author{
+  flex:0 0 auto;
+}
+.pageWrap.contactIndexDetails .bottommsg .readingTimes{
+  flex:0 0 auto;  
+  margin-left:2em;
+}
+.pageWrap.contactIndexDetails .bottommsg .date{
+    flex:1 0 auto;
+    text-align: right;
+}
+.pageWrap.details .bottommsg{
+  height:50rpx;
+  border-top:1px dotted #939393;
+  font-size:20rpx;
+  color: #666666;
+  display: flex;
+  line-height:50rpx;
+  margin-top:70rpx;
+}
+.pageWrap.details .bottommsg .author{
+  flex:0 0 auto;
+}
+.pageWrap.details .bottommsg .readingTimes{
+  flex:0 0 auto;  
+  margin-left:2em;
+}
+.pageWrap.details .bottommsg .date{
+    flex:1 0 auto;
+    text-align: right;
+}
+.tag image{
+  width:90rpx;
+  height:90rpx;
+  display: block;
+  margin:0 auto;
+}
+.empty{
+  font-size:24rpx;
+  width:100%;
+  text-align: center;
+  line-height:200rpx;
+  color: #a6a6a6;
+}

@@ -1,0 +1,14 @@
+<!--pages/schoolInteract/interact/interact.wxml-->
+<!-- <view class="pageWrap details">
+  <view class="title">{{news.title}}</view>
+  <view class="content">
+    <rich-text nodes="{{news.content}}"></rich-text>
+  </view>
+  <view class="bottommsg">
+    <text class="author">来源：{{news.author}}</text>
+    <text class="readingTimes">阅读次数：{{news.readingTimes}}</text>
+    <text class="date">发布日期：{{news.date}}</text>
+  </view>
+</view> -->
+<web-view src="{{url}}"></web-view>
+<!-- <web-view src="https://www.qq.com/"></web-view> -->

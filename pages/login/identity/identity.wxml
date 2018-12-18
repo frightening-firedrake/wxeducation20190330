@@ -1,0 +1,33 @@
+<!--pages/login/identity/identity.wxml-->
+<view class="pageWrap">
+  <view class="title">请选择你的身份</view>
+  <view class="idbox">
+    <image style="background-color:#1082ff;" bindtap="selectID" data-id="学号" class="photo {{id=='学号'?'active':''}}" mode="aspectFit" src="/static/images/login/stu.png"></image>
+    <image wx:if="{{id=='学号'}}" class="current" mode="aspectFit" src="/static/images/login/current.png"></image>
+    <text>我是学生</text>
+  </view>
+  <view class="idbox">
+    <image style="background-color:#68aefc;" bindtap="selectID" data-id="工号" class="photo {{id=='工号'?'active':''}}" mode="aspectFit" src="/static/images/login/tea.png"></image>
+    <image wx:if="{{id=='工号'}}" class="current" mode="aspectFit" src="/static/images/login/current.png"></image>
+    <text>我是老师</text>
+  </view>
+  <button type="default" class="btnl" plain="false"  bindtap="tologin" hover-class="none"> 下一步 </button>
+</view>
+<view wx:if="{{modal.show}}" class="mask"></view>
+<view wx:if="{{modal.show}}" class="modal">
+  <image class="close" mode="aspectFit" bindtap="closeModal" src="/static/images/login/close.png"></image> 
+  <view class="modalTitle">选择您的教师职位</view>
+  <view class="photoBoxWrap">
+    <view class="idbox">
+      <image style="background-color:#cad8ec;" bindtap="selectID" data-id="工号1" class="photo {{id=='工号1'?'active':''}}" mode="aspectFit" src="/static/images/login/tea1.png"></image>
+      <image wx:if="{{id=='工号1'}}" class="current" mode="aspectFit" src="/static/images/login/current.png"></image>
+      <text>教师</text>
+    </view>
+    <view class="idbox">
+      <image style="background-color:#cad8ec;" bindtap="selectID" data-id="工号2" class="photo {{id=='工号2'?'active':''}}" mode="aspectFit" src="/static/images/login/tea2.png"></image>
+      <image wx:if="{{id=='工号2'}}" class="current" mode="aspectFit" src="/static/images/login/current.png"></image>
+      <text>辅导员</text>
+    </view>
+  </view>    
+  <button type="default" class="btn" plain="false"  bindtap="tologin" hover-class="none"> 提交职位 </button>  
+</view>

@@ -1,0 +1,82 @@
+/* pages/studentService/ranking/ranking.wxss */
+.scroll-nav-item.active{
+  color:#2f9bfe;
+}
+.banner{
+  width:auto;
+  height:300rpx;
+}
+.banner image{
+  width:100%;
+  height:300rpx;
+}
+.scroll-nav-wrap{
+  width: 100%;
+  height: 70rpx;
+  overflow: hidden;
+  background: #fff;
+  white-space: nowrap;
+  box-shadow: -4rpx 3rpx 5rpx 0rpx 	rgba(9, 1, 4, 0.1);
+  position:relative;
+  font-size:28rpx;
+}
+.scroll-nav{
+  height:70rpx;
+  position:relative;
+}
+.scroll-nav-item{
+  text-align: center;
+  width:20%;
+  /* width:200rpx; */
+  height:70rpx;
+  color: #333333;
+  line-height:70rpx;
+  display: inline-block;
+}
+.line{
+  position:absolute;
+  top:64rpx;
+  width: 4em;
+	height: 6rpx;
+	background-color: #2f9bfe;
+  margin-left:-2em;
+}
+.rankingWrap{
+  background-color:#fff;
+  /* padding:20rpx 20rpx 0; */
+}
+.rankingWrap .title{
+  font-size:30rpx;
+  height:35rpx;
+  width:100%;
+  border-left:12rpx solid #2f9bfe;
+  color: #666666;
+  line-height:35rpx;
+  padding-left:10rpx;
+  margin-bottom:20rpx;
+}
+.rankingList{
+  height:70rpx;
+  border-bottom:1px solid #dce6ec;
+  padding:20rpx 0rpx;
+  display: flex;
+  position:relative;
+}
+.rankingList image{
+  height:70rpx;
+  width:40rpx;
+  display: block;
+}
+.rankingList>view{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26rpx;
+  color:#666;
+}
+.rankingList>view image{
+  width:40rpx;
+  height:70rpx;
+  display: block;
+  margin:0 auto;
+}

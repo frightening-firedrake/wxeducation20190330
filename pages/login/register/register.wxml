@@ -1,0 +1,27 @@
+<!--pages/login/register/register.wxml-->
+<view class="pageWrap">
+  <image class="logo" mode="aspectFit" src="/static/images/login/logo.png"></image> 
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="errormsg"><icon  wx:if="{{error}}" type="warn" size="16"/>{{errormsg}}</view>
+    <view class="section">
+      <image class="icon" mode="aspectFit" src="/static/images/login/user.png"></image> 
+      <input name="user" type="text" bindinput="userinput" placeholder="请输入您的{{identity}}"  />
+    </view>
+    <view class="section">
+      <image class="icon" mode="aspectFit" src="/static/images/login/pass.png"></image> 
+      <input name="pass"  value="{{pass}}" bindblur="passblur" type="text" bindinput="passinput" password placeholder="请输入您的密码" />
+    </view>
+    <view class="section">
+      <image class="icon" mode="aspectFit" src="/static/images/login/pass.png"></image> 
+      <input name="pass2" value="{{pass2}}" bindblur="pass2blur" type="text" bindinput="pass2input" password placeholder="请再次输入您的密码" />
+    </view>
+    <button form-type="submit">注册</button>
+    <view class="btn-area">
+      <view bindtap="toForget"></view>
+      <view bindtap="toLogin" class="active">现在登录</view>
+    </view>
+  </form>
+</view>
+<image class="bg" mode="aspectFill" src="/static/images/login/loginbg.jpg"></image> 
+
+

@@ -1,0 +1,20 @@
+<!--pages/studentService/whoamI/tests/tests.wxml-->
+<view class="pageWrap">
+  <view class="tests" animation="{{animationData[index]}}" style="z-index:{{100-index}}" wx:for="{{tests}}" wx:key="{{index}}">
+    <view class="content">
+      <rich-text nodes="{{item.content}}"></rich-text>
+    </view>
+    <radio-group class="radio-group options" data-index="{{index}}" bindchange="radioChange">
+      <label class="radio" wx:for="{{item.options}}" wx:key="{{index}}">
+        <radio color="#3c75ff" value="{{item.value}}"/>{{item.label}}
+      </label>
+    </radio-group>
+    <view class="btnbox one" wx:if="{{(index!==0)&&(index+1!==tests.length)}}">
+      <button type="default" class="btn" plain="false" data-index="{{index}}" bindtap="pretest" hover-class="none"> 上一题 </button>
+    </view>
+    <view class="btnbox two" wx:if="{{index+1==tests.length}}">
+      <button type="default" class="btnl" plain="false"  data-index="{{index}}" bindtap="pretest" hover-class="none"> 上一题 </button>
+      <button type="default" class="btn" plain="false" bindtap="submit" hover-class="none"> 提交 </button>      
+    </view>
+  </view>
+</view>

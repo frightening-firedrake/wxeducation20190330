@@ -1,0 +1,43 @@
+<!--pages/studentService/whoamI/psychtestResult2/psychtestResult2.wxml-->
+<view class="pageWrap">
+  <view class="psychtestWrap">
+    <view class="psychtestPanel">
+      <view class="title">{{psychtest.title}}</view>
+      <image mode="aspectFit" src="{{psychtest.img}}"></image>
+      <view class="restitle">
+        你的测试分值：
+        <text style="color: #2f9bfe;font-size:36rpx;">{{res.score}}</text>
+        分
+      </view>
+      <view class="rescontent">
+        <rich-text nodes="{{res.content}}"></rich-text>
+      </view>
+    </view>
+  </view>
+  <!-- 更多测试 -->
+  <view class="xlcsWrap">
+    <view class="title">更多测试</view>
+    <view class="xlcsList" wx:for="{{xlcsList}}" wx:key="index"  data-id="{{item.id}}" bindtap="tapview">
+      <image mode="aspectFit" src="{{item.src}}"></image>
+      <view class="content">
+        <view class="header">
+          {{item.title}}
+          <text wx:if="{{item.content.title >= 14}}">...</text>
+        </view>
+        <view class="intro">
+          {{item.content}}
+          <text wx:if="{{item.content.length >= 39}}">...</text>
+        </view>
+        <text class="date">{{item.date}}</text>
+      </view>
+    </view>
+    <view wx:if="{{endLoading}}" class="weui-loadmore">
+      <view class="weui-loading"></view>
+      <view class="weui-loadmore__tips">正在加载</view>
+    </view>
+    <view class="end" wx:if="{{end}}">—— 我也是有底线的 ——</view>
+  </view>
+</view>
+
+
+

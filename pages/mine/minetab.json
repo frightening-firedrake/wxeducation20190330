@@ -1,0 +1,9 @@
+{
+  "backgroundTextStyle": "light",
+  "navigationBarTitleText": "我的",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor":"#4967e9",
+  "usingComponents": {
+    "modal_qd": "/components/modal_qd/modal_qd"
+  }
+}

@@ -1,0 +1,11 @@
+/* pages/xxsaid/activity/activityDetails/activityDetails.wxss */
+.pageWrap.details .title{
+  color:#3c72ff;
+}
+.pageWrap.details .title image.icon{
+  height:40rpx;
+  width:40rpx;
+  /* vertical-align: middle; */
+  position:relative;
+  top:7rpx;
+}

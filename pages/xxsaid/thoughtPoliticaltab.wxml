@@ -1,0 +1,43 @@
+<!--pages/xxsaid/thoughtPolitical/tab/thoughtPolitical.wxml-->
+<view class="home pageWrap">
+  <!-- banner图 -->
+  <view class="banner">
+    <image mode="{{banner.mode}}" src="{{banner.src}}"></image>
+  </view>
+  <!-- 标签列表 -->
+  <view class="tagboxWrap">
+    <view class="tagbox">
+      <!-- <view class="title1"><text>—— </text>{{taglist1.title}}<text> ——</text></view> -->
+      <view class="tagWrap">
+        <view wx:for="{{taglist1.items}}" class="tag" wx:key="index" data-tag="{{item.tag}}" bindtap="taptag">
+          <image mode="aspectFit" src="{{item.src}}"></image>
+          <text>{{item.text}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 智慧校园 -->
+  <view class="zhxy">
+    <view class="name">智慧校园 <text>移动应用平台</text></view>
+    <text class="intro">一个为校园提供信息化服务的平台</text>
+  </view>
+  <!-- 校园互动 -->
+  <view class="xyhdWrap">
+    <view class="title">校园互动</view>
+    <view class="empty" wx:if="{{empty}}">暂无信息</view>
+    <view class="xyhdList" wx:for="{{xyhdList}}" wx:key="index"  data-id="{{item.id}}" bindtap="tapview">
+      <image mode="aspectFit" src="{{item.src}}"></image>
+      <view class="content">
+        {{item.content}}
+        <text wx:if="{{item.content.length >= 25}}">...</text>
+        <text class="date">{{item.date}}</text>
+      </view>
+    </view>
+    <view wx:if="{{endLoading}}" class="weui-loadmore">
+      <view class="weui-loading"></view>
+      <view class="weui-loadmore__tips">正在加载</view>
+    </view>
+    <view class="end" wx:if="{{end}}">—— 没有更多的内容了 ——</view>
+  </view>
+</view>
+

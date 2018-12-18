@@ -1,0 +1,63 @@
+/* pages/studentService/contactIndex/contactIndexDetails/contactIndexDetails.wxss */
+.pageWrap{
+  background-color:#fff;
+  padding:0 25rpx;
+}
+.title{
+  height:100rpx;
+  line-height:100rpx;
+  font-size:30rpx;
+  color: #333;
+  text-align: center;
+  font-weight:700;
+}
+.listWrap{
+  background-color:#fff;
+  border-top:1px solid #c7c7c7;
+  border-left:1px solid #c7c7c7;
+}
+.listWrap .listRow{
+  background-color:#fff;
+  border-bottom:1px solid #c7c7c7;
+  height:80rpx;
+  line-height:80rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.listWrap .listRow.header{
+  background-color:#f5f5f5;
+}
+.listWrap .listRow .listcell1{
+  border-right:1px solid #c7c7c7;
+  height:80rpx;
+  line-height:80rpx;
+  box-sizing: border-box;
+  text-align: center;
+  font-size:24rpx;
+  color:#333;
+  width:364rpx;
+  flex: 0 1 auto;
+}
+.listWrap .listRow .listcell2{
+  border-right:1px solid #c7c7c7;
+  height:80rpx;
+  line-height:80rpx;
+  box-sizing: border-box;
+  text-align: center;
+  font-size:24rpx;
+  color:#333;
+  width:150rpx;
+  flex: 0 1 auto;
+}
+.listWrap .listRow .listcell3{
+  border-right:1px solid #c7c7c7;
+  height:80rpx;
+  line-height:80rpx;
+  box-sizing: border-box;
+  text-align: center;
+  font-size:24rpx;
+  color:#333;
+  width:193rpx;
+  flex: 0 1 auto;
+}

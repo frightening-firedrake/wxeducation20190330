@@ -1,0 +1,70 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/login/login/login",
+    "pages/login/identity/identity",
+    "pages/login/register/register",
+    "pages/xxsaid/thoughtPoliticaltab",
+    "pages/studentService/studentServicetab",
+    "pages/mine/minetab",
+    "pages/xxsaid/thoughtPolitical/thoughtPolitical",
+    "pages/xxsaid/activity/activity",
+    "pages/xxsaid/activity/activityDetails/activityDetails",
+    "pages/xxsaid/policy/policy",
+    "pages/xxsaid/rules/rules",
+    "pages/xxsaid/details/details",
+    "pages/studentService/contactIndex/contactIndex",
+    "pages/studentService/contactIndex/contactIndexDetails/contactIndexDetails",
+    "pages/studentService/whoamI/whoamI",
+    "pages/studentService/whoamI/psychtest/psychtest",
+    "pages/studentService/whoamI/tests/tests",
+    "pages/studentService/whoamI/psychtestResult/psychtestResult",
+    "pages/studentService/whoamI/psychtestResult2/psychtestResult2",
+    "pages/studentService/dangfei/dangfei",
+    "pages/studentService/tuanfei/tuanfei",
+    "pages/studentService/ranking/ranking",
+    "pages/schoolInteract/interact/interact",
+    "pages/newsDetails/newsDetails",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "六号楼",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color":"#c4c4c4",
+    "selectedColor":"#1082ff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath":"/static/images/home/tab01.png",
+        "selectedIconPath":"/static/images/home/tab11.png",
+        "requiredBackgroundModes": [
+          "audio"
+        ],
+        "text": "慧校"
+      },
+      {
+        "pagePath": "pages/xxsaid/thoughtPoliticaltab",
+        "iconPath": "/static/images/home/tab02.png",
+        "selectedIconPath": "/static/images/home/tab12.png",
+        "text": "思政教育"
+      },
+      {
+        "pagePath": "pages/studentService/studentServicetab",
+        "iconPath": "/static/images/home/tab03.png",
+        "selectedIconPath": "/static/images/home/tab13.png",
+        "text": "学生服务"
+      },
+      {
+        "pagePath": "pages/mine/minetab",
+        "iconPath": "/static/images/home/tab04.png",
+        "selectedIconPath": "/static/images/home/tab14.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

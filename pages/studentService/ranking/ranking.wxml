@@ -1,0 +1,34 @@
+<!--pages/studentService/ranking/ranking.wxml-->
+<view class="pageWrap">
+  <!-- banner图 -->
+  <view class="banner">
+    <image mode="{{banner.mode}}" src="{{banner.src}}"></image>
+  </view>
+  <!-- 导航 -->
+  <view  class="scroll-nav-wrap">
+    <scroll-view class="scroll-nav" scroll-x>
+      <view data-num="{{index}}" wx:for="{{scrollNav}}" wx:key="{{index}}" data-state="{{item.state}}"  class="scroll-nav-item" style="width:{{item.width}};" >{{item.title}}</view>
+    </scroll-view>
+  </view>
+  <!-- 更多测试 -->
+  <view class="rankingWrap">
+    <view class="rankingList" wx:for="{{rankingList}}" wx:key="{{index}}">
+      <view style="width:{{scrollNav[0].width}};">
+        <image  wx:if="{{index==0}}" class="next" mode="aspectFit" src="/static/images/ranking/gold.png"></image>
+        <image wx:elif="{{index==1}}" class="next" mode="aspectFit" src="/static/images/ranking/silver.png"></image>
+        <image wx:elif="{{index==2}}" class="next" mode="aspectFit" src="/static/images/ranking/copper.png"></image>
+        <view wx:else> {{index-0+1}}</view>
+      </view>
+      <view style="width:{{scrollNav[1].width}};">
+        {{item.number}}
+      </view>
+      <view style="width:{{scrollNav[2].width}};">
+        {{item.wxnumber}}        
+      </view>
+      <view style="width:{{scrollNav[3].width}};">
+        {{item.score}}分        
+      </view>
+    </view>
+  </view>
+</view>
+

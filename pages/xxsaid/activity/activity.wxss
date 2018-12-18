@@ -1,0 +1,95 @@
+/* pages/xxsaid/activity/activity.wxss */
+.pageWrap{
+  background-color:#f2f3f9;
+}
+.banner{
+  width:auto;
+  height:300rpx;
+}
+.banner image{
+  width:100%;
+  height:300rpx;
+}
+.hddtWrap{
+  background-color:#fff;
+  padding:0rpx 0rpx 0;
+  border-bottom:1px solid #dce6ec;
+}
+.hddtWrap>.title{
+  font-size:30rpx;
+  height:35rpx;
+  width:100%;
+  border-left:12rpx solid #2f9bfe;
+  color: #666666;
+  line-height:35rpx;
+  padding-left:10rpx;
+  margin-bottom:20rpx;
+}
+.hddtList{
+  height:180rpx;
+  border-top:1px solid #dce6ec;
+  padding:10rpx 30rpx 0;
+}
+.hddtList .content .title{
+  height:60rpx;
+  line-height:60rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.hddtList .content .title text{
+  height:60rpx;
+  line-height:60rpx;
+  font-size:30rpx;
+  color: #3c72ff;
+  overflow: hidden;
+}
+.hddtList .content image.icon{
+  height:40rpx;
+  width:40rpx;
+  flex:0 0 auto;
+}
+.hddtList .content image.new{
+  height:30rpx;
+  width:67rpx;
+  margin-left:20rpx;
+  flex:0 0 auto;
+}
+.hddtList .content{
+  height:150rpx;
+  width:auto;
+  line-height:45rpx;
+  position:relative;
+  color: #333333;
+  font-size:30rpx;
+  /* padding-left:20rpx; */
+}
+.hddtList .content .point{
+  width: 12rpx;
+	height: 12rpx;
+  border-radius: 50%;
+	background-color: #ff8108;
+  position:absolute;
+  left:0;
+  top:25%;
+  margin-top:-6rpx;
+}
+.hddtList .date{
+  text-align: right;
+  display: block;
+  line-height:20rpx;
+  color: #666666;
+  font-size:18rpx;
+}
+.end{
+  text-align: center;
+  color: #333333;
+  font-size:30rpx;
+  background-color:#f2f3f9;
+  margin:0 -20rpx;
+}
+.weui-loadmore{
+  margin:5rpx auto;
+  width:100%;
+  border-top:1px solid #dce6ec;
+}

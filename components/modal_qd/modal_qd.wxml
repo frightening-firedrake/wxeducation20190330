@@ -1,0 +1,9 @@
+<!-- 组件模板 -->
+<view wx:if="{{show}}" class="mask"></view>
+<view wx:if="{{show}}" class="modal">
+  <image class="close" mode="aspectFit" bindtap="_closeModal" src="/static/images/personal/close.png"></image> 
+  <view class="small">本次获得</view>
+  <view class="main">
+    {{score}}积分
+  </view>
+</view>

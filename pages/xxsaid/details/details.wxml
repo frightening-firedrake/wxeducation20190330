@@ -1,0 +1,5 @@
+<!--pages/xxsaid/details/details.wxml-->
+<view>
+  <image style="width:100%;margin-top:200rpx;" mode="aspectFit" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543318386651&di=2bbf23f0b7b0526b42164d2bb287f9ad&imgtype=0&src=http%3A%2F%2Fmmbiz.qpic.cn%2Fmmbiz_gif%2FOicIwwSs7CPQDEEqiblBC6xpkbNOiaOl9TEq8dc57h0Z5IsD7jjUQ0hMAQrdLdD1MNVp4zZVF58UNPLt3zzScsUXw%2F640%3Fwx_fmt%3Dgif"></image>
+  <text style="display:block;text-align:center;">页面被我带走了......喵呜</text>
+</view>

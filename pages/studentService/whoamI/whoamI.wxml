@@ -1,0 +1,39 @@
+<!--pages/studentService/whoamI/whoamI.wxml-->
+<view class="pageWrap">
+  <!-- banner图 -->
+  <view class="banner">
+    <image mode="{{banner.mode}}" src="{{banner.src}}"></image>
+  </view>
+  <!-- 导航 -->
+  <view  class="scroll-nav-wrap">
+    <scroll-view class="scroll-nav" scroll-x>
+      <view data-num="-1"  data-state="-1" bindtap="tapnav" class="scroll-nav-item {{_num==-1?'active':''}}">全部</view>
+      <view data-num="{{index}}" wx:for="{{scrollNav}}" wx:key="index" data-state="{{item.state}}" bindtap="tapnav" class="scroll-nav-item {{_num==index?'active':''}}">{{item.title}}</view>
+      <view class="line" style="left:{{navLeft}}" animation="{{animationLine}}"></view>
+    </scroll-view>
+  </view>
+  <!-- 更多测试 -->
+  <view class="xlcsWrap">
+    <!-- <view class="title">更多测试</view> -->
+    <view class="xlcsList" wx:for="{{xlcsList}}" wx:key="index"  data-id="{{item.id}}" bindtap="tapview">
+      <image mode="aspectFit" src="{{item.src}}"></image>
+      <view class="content">
+        <view class="header">
+          {{item.title}}
+          <text wx:if="{{item.title.length >= 14}}">...</text>
+        </view>
+        <view class="intro">
+          {{item.content}}
+          <text wx:if="{{item.content.length >= 19}}">...</text>
+        </view>
+        <text class="date">{{item.date}}</text>
+      </view>
+    </view>
+    <view wx:if="{{endLoading}}" class="weui-loadmore">
+      <view class="weui-loading"></view>
+      <view class="weui-loadmore__tips">正在加载</view>
+    </view>
+    <view class="empty" wx:if="{{empty}}">暂无信息</view>
+    <view class="end" wx:if="{{end}}">—— 没有更多的内容了 ——</view>
+  </view>
+</view>

@@ -1,0 +1,25 @@
+<!--pages/xxsaid/thoughtPolitical/thoughtPolitical.wxml-->
+<view class="pageWrap">
+  <!-- banner图 -->
+  <view class="banner">
+    <image mode="{{banner.mode}}" src="{{banner.src}}"></image>
+  </view>
+  <!-- 新闻类列表 -->
+  <view class="xwlbWrap">
+    <view class="xwlbList" wx:for="{{xwlbList}}" wx:key="{{index}}"  data-id="{{item.id}}" bindtap="tapview">
+      <view class="content">
+        <text class="point" ></text>
+        <image class="new" wx:if="{{index<3}}" mode="aspectFit" src="/static/images/thoughtPolitical/new.png"></image>
+        {{item.content}}
+        <text wx:if="{{item.content.length >= 37}}">...</text>
+      </view>
+        <text class="date">发布日期：{{item.date}}</text>
+    </view>
+    <view wx:if="{{endLoading}}" class="weui-loadmore">
+      <view class="weui-loading"></view>
+      <view class="weui-loadmore__tips">正在加载</view>
+    </view>
+    <view class="empty" wx:if="{{empty}}">暂无信息</view>
+    <view class="end" wx:if="{{end}}">—— 没有更多的内容了 ——</view>
+  </view>
+</view>

@@ -1,0 +1,31 @@
+/* pages/studentService/contactIndex/contactIndex.wxss */
+.pageWrap{
+  background-color:#f2f3f9;
+}
+.listWrap{
+  background-color:#fff;
+  border-top:1px solid #c7c7c7;
+  border-left:1px solid #c7c7c7;
+  margin-top:10rpx;
+}
+.listWrap .title{
+  border-bottom:1px solid #c7c7c7;
+  border-right:1px solid #c7c7c7;
+  height:60rpx;
+  line-height:60rpx;
+  font-size:24rpx;
+  color: #666666;
+  padding-left:60rpx;
+}
+.listWrap .listcell{
+  border-bottom:1px solid #c7c7c7;
+  border-right:1px solid #c7c7c7;
+  height:80rpx;
+  width:33.3%;
+  line-height:80rpx;
+  font-size:24rpx;
+  color: #333;
+  text-align: center;
+  box-sizing: border-box;
+  float: left;
+}

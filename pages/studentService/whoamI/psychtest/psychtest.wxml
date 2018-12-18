@@ -1,0 +1,41 @@
+<!--pages/studentService/whoamI/psychtest/psychtest.wxml-->
+<view class="pageWrap">
+  <view class="psychtestWrap">
+    <image class="bg" mode="aspectFit" src="/static/images/psychtest/bg.png"></image>
+    <view class="psychtestPanel">
+      <view class="title">{{psychtest.title}}</view>
+      <image mode="aspectFit" src="{{psychtest.img}}"></image>
+      <view class="info">{{psychtest.info}}</view>
+      <button type="default" class="btn" plain="false" disabled="{{disabled}}" bindtap="begintest" hover-class="other-button-hover"> 开始测试 </button>
+      <view class="bottom">
+        <text>阅读次数：{{psychtest.readingTimes}}</text>
+        <text>发布日期：{{psychtest.data}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 更多测试 -->
+  <view class="xlcsWrap">
+    <view class="title">更多测试</view>
+    <view class="xlcsList" wx:for="{{xlcsList}}" wx:key="index"  data-id="{{item.id}}" bindtap="tapview">
+      <image mode="aspectFit" src="{{item.src}}"></image>
+      <view class="content">
+        <view class="header">
+          {{item.title}}
+          <text wx:if="{{item.content.title >= 14}}">...</text>
+        </view>
+        <view class="intro">
+          {{item.content}}
+          <text wx:if="{{item.content.length >= 39}}">...</text>
+        </view>
+        <text class="date">{{item.date}}</text>
+      </view>
+    </view>
+    <view wx:if="{{endLoading}}" class="weui-loadmore">
+      <view class="weui-loading"></view>
+      <view class="weui-loadmore__tips">正在加载</view>
+    </view>
+    <view class="empty" wx:if="{{empty}}">暂无信息</view>
+    <view class="end" wx:if="{{end}}">—— 没有更多的内容了 ——</view>
+  </view>
+</view>
+

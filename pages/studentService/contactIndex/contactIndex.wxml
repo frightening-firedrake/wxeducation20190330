@@ -1,0 +1,27 @@
+<!--pages/studentService/contactIndex/contactIndex.wxml-->
+<view class="pageWrap">
+  <view class="listWrap">
+    <view class="title">
+      管理机构
+    </view>
+    <view class="listcell" wx:for="{{list1}}" wx:key="index" data-name="{{item.name}}" data-id="{{item.id}}" bindtap="tapview">
+      {{item.name}}
+    </view>
+    <view class="listcell" wx:if="{{list1.length%3==1}}"></view>
+    <view class="listcell" wx:if="{{list1.length%3==1}}"></view>
+    <view class="listcell" wx:if="{{list1.length%3==2}}"></view>
+    <view style="clear:both;"></view>
+  </view>
+  <view class="listWrap">
+    <view class="title">
+      学院机构
+    </view>
+    <view class="listcell" wx:for="{{list2}}" wx:key="index" data-name="{{item.name}}" data-id="{{item.id}}" bindtap="tapview">
+      {{item.name}}
+    </view>
+    <view class="listcell" wx:if="{{list2.length%3==1}}"></view>
+    <view class="listcell" wx:if="{{list2.length%3==1}}"></view>
+    <view class="listcell" wx:if="{{list2.length%3==2}}"></view>
+    <view style="clear:both;"></view>
+  </view>
+</view>
