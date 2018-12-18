@@ -95,16 +95,37 @@ Page({
     var url = event.currentTarget.dataset.tag
     if (url == 'modalqd') {
       if (!app.globalData.is_qiandao) {
-        app.globalData.score = app.globalData.score - 0 + 2
-        this.setData({
-          modalqd: true
+        wx.request({
+          url: app.globalData.apiRoot + app.globalData.api.sing,
+          method: "POST",
+          header: {
+            "content-type": "application/x-www-form-urlencoded"
+          },
+          data: {
+            id: 1
+          },
+          success: function (res) {
+            if (res.data.integral) {
+              this.setData({
+                modalqd: true,
+                'user.score': score
+              })
+              app.globalData.is_qiandao = true;
+            } else {
+              wx.showToast({
+                title: '今日已签到',
+                duration: 2000
+              })
+              app.globalData.is_qiandao = true;
+            }
+          }
         })
-        app.globalData.is_qiandao = true;
       } else {
         wx.showToast({
           title: '今日已签到',
           duration: 2000
         })
+        app.globalData.is_qiandao = true;
       }
       return
     }

@@ -1,4 +1,4 @@
-//app.js
+ //app.js
 App({
   onLaunch: function () {
     console.log('开发文档 https://developers.weixin.qq.com/miniprogram/dev/index.html')//打开控制台连接进入开发文档
@@ -53,7 +53,7 @@ App({
   globalData: {
     // apiRoot: 'https://www.baidu.com/',//鬼抽疯了想把api全独立出来管理真是作死
     // apiRoot: 'http://192.168.1.252:8083/educationSystem/',//zhoumingkun
-      apiRoot: 'http://192.168.1.253:8085/educationSystem/',//lijianbo
+      apiRoot: 'http://192.168.1.253:8080/educationSystem/',//lijianbo
     api:{
       getOpenId:'wechat/getOpenId',
       ACCESS_TOKEN: "weixinContent/getToken", //获取ACCESS_TOKEN

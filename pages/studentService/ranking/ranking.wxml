@@ -20,13 +20,13 @@
         <view wx:else> {{index-0+1}}</view>
       </view>
       <view style="width:{{scrollNav[1].width}};">
-        {{item.number}}
+        {{item.account}}
       </view>
       <view style="width:{{scrollNav[2].width}};">
-        {{item.wxnumber}}        
+        {{item.weixinNum}}        
       </view>
       <view style="width:{{scrollNav[3].width}};">
-        {{item.score}}分        
+        {{item.integral}}分        
       </view>
     </view>
   </view>
