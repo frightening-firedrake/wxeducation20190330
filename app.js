@@ -52,7 +52,7 @@ App({
   },
   globalData: {
     // apiRoot: 'https://www.baidu.com/',//鬼抽疯了想把api全独立出来管理真是作死
-    apiRoot: 'http://192.168.1.252:8083/educationSystem/',//测试服务器暂用周明坤
+    apiRoot: 'https://education.ityyedu.com/educationSystem/',//测试服务器
     // apiRoot: 'http://192.168.1.252:8083/educationSystem/',//zhoumingkun
     // apiRoot: 'http://192.168.1.253:8080/educationSystem/',//lijianbo
     api:{
@@ -60,8 +60,8 @@ App({
       ACCESS_TOKEN: "wechat/getToken", //获取ACCESS_TOKEN
       interact: 'wechat/getContent',//首页tab校园互动	校园互动获取微信公众号发布的学生文章
       hot: 'weixinContent/findNew',//首页tab活动动态热门	活动动态最新发布的活动动态显示在首页
-      register: 'account/save',//注册方法
-      login:'account/loginWX',//登录方法
+      register: 'weixinContent/save',//注册方法
+      login:'weixinContent/loginWX',//登录方法
       thoughtPoliticalList: 'weixinContent/dataSizheng',//思政建设列表
       // 思政建设列表	思政建设管理发布的文章列表
       thoughtPoliticalDetails: 'weixinContent/getSizheng',//偏向于通用的文章详情页

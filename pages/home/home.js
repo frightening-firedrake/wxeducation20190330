@@ -222,7 +222,7 @@ Page({
     this.gethotdata()
     const innerAudioContext = wx.createInnerAudioContext()
     innerAudioContext.autoplay = true
-    innerAudioContext.src = 'http://221.204.62.14/amobile.music.tc.qq.com/C400003yTpbV2Z0kUH.m4a?guid=7673050330&vkey=B1055F203A49AACA238BB8067054D0717520C506ECFFC0FA08EABDC220876DEDF90CB8A34E0355C4096B61F37BEE1C5D98DB998E60097923&uin=0&fromtag=66'
+    innerAudioContext.src = 'http://dl.stream.qqmusic.qq.com/C400004Sktnw0KnoIF.m4a?guid=7673050330&vkey=735B7E123E636C918C65CC995EEA705401E0E8E1ED1C90CF33831019F65C7814C46FFCEC893D76059FD05D2F561658811FA1A6D1FF2B94C4&uin=0&fromtag=66'
   },
 
   /**
