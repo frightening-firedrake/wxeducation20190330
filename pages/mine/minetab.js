@@ -3,11 +3,40 @@
 const app = getApp()
 
 Page({
+  // 请求数据
+  getIntegral() {
+    var _this = this
+    wx.request({
+      url: app.globalData.apiRoot + app.globalData.api.getIntegral, //
+      method: 'POST',
+      data: {
+        openId: app.globalData.openId
+      },
+      header: {
+        // Authorization: app.globalData.Token,//验证登录信息用
+        // 'content-type': 'application/json' // 默认值
+        "content-type": "application/x-www-form-urlencoded"
+      },
+      success(res) {
+        if (!res.data.integral) {
+          return
+        }
+        app.globalData.score = res.data.integral
+        app.globalData.number=res.data.account
+        _this.setData({
+          'user.score': res.data.integral,
+          // 'user.number': res.data.account,
+        })
+      },
+      fail(res) {
+      }
+    })
+  },
   taptag(event) {
-    let that = this
+    let _this = this
     var link_type = event.currentTarget.dataset.link_type
-    var score = this.data.user.score - 0 + 2
-    app.globalData.score = score
+    // var score = this.data.user.score - 0 + 2
+    // app.globalData.score = score
     if (link_type == 'modalqd') {
       if (!app.globalData.is_qiandao) {
         wx.request({
@@ -17,14 +46,15 @@ Page({
             "content-type": "application/x-www-form-urlencoded"
           },
           data: {
-            id: 1
+            openId: app.globalData.openId
           },
           success: function(res) {
             if (res.data.integral) {
-              this.setData({
+              _this.setData({
                 modalqd: true,
-                'user.score': score
+                'user.score': res.data.integral
               })
+              app.globalData.score = res.data.integral;
               app.globalData.is_qiandao = true;
             } else {
               wx.showToast({
@@ -95,42 +125,96 @@ Page({
   },
   onLoad: function() {
     this.setData({
-      'user.score': app.globalData.score,
       'user.number': app.globalData.number,
     })
-    if (app.globalData.userInfo) {
+
+    // if (app.globalData.userInfo) {
+    //   this.setData({
+    //     userInfo: app.globalData.userInfo,
+    //     hasUserInfo: true
+    //   })
+    // } else if (this.data.canIUse) {
+    //   // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+    //   // 所以此处加入 callback 以防止这种情况
+    //   app.userInfoReadyCallback = res => {
+    //     this.setData({
+    //       userInfo: res.userInfo,
+    //       hasUserInfo: true
+    //     })
+    //   }
+    // } else {
+    //   // 在没有 open-type=getUserInfo 版本的兼容处理
+    //   wx.getUserInfo({
+    //     success: res => {
+    //       app.globalData.userInfo = res.userInfo
+    //       this.setData({
+    //         userInfo: res.userInfo,
+    //         hasUserInfo: true
+    //       })
+    //     }
+    //   })
+    // }
+  },
+
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+    // this.getdata();
+
+
+  },
+
+  /**
+  * 生命周期函数--监听页面显示
+  */
+  onShow: function () {
+    
+    if (app.globalData.score) {
       this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
+        'user.score': app.globalData.score,
       })
-    } else if (this.data.canIUse) {
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
     } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
+      this.getIntegral()
     }
   },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+    // console.log("onReachBottom")
+    if (!this.data.end) {
+      this.getACCESS_TOKEN()
+    }
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
   }
 })

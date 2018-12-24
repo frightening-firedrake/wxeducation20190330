@@ -22,11 +22,11 @@
       <view class="content">
         <view class="header">
           {{item.title}}
-          <text wx:if="{{item.content.title >= 14}}">...</text>
+          <text wx:if="{{item.title.length >= 14}}">...</text>
         </view>
         <view class="intro">
           {{item.content}}
-          <text wx:if="{{item.content.length >= 39}}">...</text>
+          <text wx:if="{{item.content.length >= 19}}">...</text>
         </view>
         <text class="date">{{item.date}}</text>
       </view>
@@ -35,9 +35,8 @@
       <view class="weui-loading"></view>
       <view class="weui-loadmore__tips">正在加载</view>
     </view>
-    <view class="end" wx:if="{{end}}">—— 我也是有底线的 ——</view>
+    <view class="empty" wx:if="{{empty}}">暂无信息</view>
+    <view class="end" wx:if="{{end}}">—— 没有更多的内容了 ——</view>
   </view>
 </view>
-
-
 

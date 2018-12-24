@@ -20,11 +20,6 @@
   color: #333333;
   line-height:45rpx;
 }
-.pageWrap.details .content{
-  font-size:30rpx;
-  color: #333333;
-  line-height:45rpx;
-}
 .pageWrap.contactIndexDetails .bottommsg{
   height:50rpx;
   border-top:1px dotted #939393;

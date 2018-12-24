@@ -46,7 +46,8 @@ Page({
         width: '25%'
       },
       {
-        title: "微信号",
+        // title: "微信号",
+        title: "微信呢称",
         state: 3,
         width: '25%'
       },

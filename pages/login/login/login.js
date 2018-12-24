@@ -54,11 +54,53 @@ Page({
       errormsg: '',
     })
     if(!this.data.error){
-      wx.switchTab({
-        url: '/pages/home/home'
-      })
-      console.log('form发生了submit事件，携带数据为：', e.detail.value)
+      // wx.switchTab({
+      //   url: '/pages/home/home'
+      // })
+      // console.log('form发生了submit事件，携带数据为：', e.detail.value)
+      var data = {};
+      data.account = e.detail.value.user;
+      data.password = e.detail.value.pass;
+      // console.log(data)
+      this.login(data)
     }
+  },
+  login(data) {
+    // this.setData({
+    //   endLoading: true
+    // })
+    var _this = this
+    wx.request({
+      url: app.globalData.apiRoot + app.globalData.api.login,
+      method: 'POST',
+      data: data,
+      header: {
+        // Authorization: app.globalData.Token,//验证登录信息用
+        // 'content-type': 'application/json' // 默认值
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      success(res) {
+        if (res.data.success) {
+          // wx.showToast({
+          //   title: res.data.code,
+          //   icon: 'success',
+          //   duration: 2000
+          // })
+          app.globalData.number = data.account
+          wx.switchTab({
+            url: '/pages/home/home'
+          })
+        } else {
+          _this.setData({
+            error: true,
+            errormsg: res.data.code,
+          })
+        }
+      },
+      fail(res) {
+
+      }
+    })
   },
   /**
    * 页面的初始数据
@@ -83,7 +125,7 @@ Page({
         userInfo: e.detail.userInfo,
         hasUserInfo: true
       })
-      // this.toRegister()
+      this.toRegister()
     }else{
 
     }

@@ -17,10 +17,10 @@ Page({
         'content-type': 'application/x-www-form-urlencoded' // 默认值
       },
       success(res) {
-       
-       
+        var news=res.data;
+        news.content=news.content.replace(/\<img/gi, '<img style="max-width:100%;height:auto" ')
         _this.setData({
-          news: res.data,
+          news: news,
         })
       },
       fail(res) {
@@ -38,6 +38,7 @@ Page({
       author: '',
       hits: '',
       createTime:'',
+      articleSource:'',
     }
   },
 

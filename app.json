@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/home/home",
     "pages/login/login/login",
+    "pages/home/home",
     "pages/login/identity/identity",
     "pages/login/register/register",
     "pages/xxsaid/thoughtPoliticaltab",

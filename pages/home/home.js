@@ -17,6 +17,9 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success(res) {
+        if(!res.data){
+          return
+        }
         _this.setData({
           'activity.id': res.data.id,
           'activity.title': res.data.title,
@@ -26,6 +29,7 @@ Page({
       }
     })
   },
+  
   getdata(ACCESS_TOKEN){
     this.setData({
       endLoading: true
@@ -115,6 +119,7 @@ Page({
   },
   // 点击标签连接
   taptag(event){
+    var _this=this;
     var url = event.currentTarget.dataset.tag
     if (url=='modalqd'){
       if (!app.globalData.is_qiandao) {
@@ -125,15 +130,15 @@ Page({
             "content-type": "application/x-www-form-urlencoded"
           },
           data: {
-            id: 1
+            openId: app.globalData.openId
           },
           success: function (res) {
             if (res.data.integral) {
-              this.setData({
+              _this.setData({
                 modalqd: true,
-                'user.score': score
               })
               app.globalData.is_qiandao = true;
+              app.globalData.score = res.data.integral;
             } else {
               wx.showToast({
                 title: '今日已签到',

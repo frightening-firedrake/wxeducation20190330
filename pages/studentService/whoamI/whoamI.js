@@ -4,17 +4,21 @@ const app = getApp()
 Page({
   // 请求数据
   getdata(type,reset) {
-    this.setData({
-      endLoading: true
-    })
     var _this = this
     var params = {}
     if(type!=-1){
       params.type=type
     }
     if (reset) {
-      _this.data.xlcsList = []
-      _this.data.page=1
+      _this.setData({
+        xlcsList:[],
+        page: 1,
+        end:false,
+      })
+    } else {
+      this.setData({
+        endLoading: true
+      })
     }
     wx.request({
       url: app.globalData.apiRoot + app.globalData.api.whoamI, 
@@ -53,7 +57,7 @@ Page({
           obj.title = value.title.substr(0, 14)
           obj.content = value.summarize.substr(0, 19)
           obj.id = value.id
-          obj.src=value.image
+          obj.src = app.globalData.apiRoot +'upload/picture/'+value.image
           _this.data.xlcsList.push(obj)
         })
         _this.setData({
@@ -92,9 +96,9 @@ Page({
   },
   // 点击校园互动详情
   tapview(event) {
-    console.log(event.currentTarget.dataset.id)
+    // console.log(event.currentTarget.dataset.id)
     wx.navigateTo({
-      url: '/pages/studentService/whoamI/psychtest/psychtest?id=' + event.currentTarget.dataset.id
+      url: '/pages/studentService/whoamI/psychtest/psychtest?id=' + event.currentTarget.dataset.id+'&type='+this.data.type
     })
   },
   /**
@@ -165,14 +169,16 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    this.getdata(this.data.type, false)
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    
+    if (!this.data.end) {
+      this.getdata(this.data.type, false)    
+    }
   },
 
   /**

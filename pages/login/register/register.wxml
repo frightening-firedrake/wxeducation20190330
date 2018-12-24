@@ -5,7 +5,7 @@
     <view class="errormsg"><icon  wx:if="{{error}}" type="warn" size="16"/>{{errormsg}}</view>
     <view class="section">
       <image class="icon" mode="aspectFit" src="/static/images/login/user.png"></image> 
-      <input name="user" type="text" bindinput="userinput" placeholder="请输入您的{{identity}}"  />
+      <input name="user" type="number" bindinput="userinput" placeholder="请输入您的{{identity}}"  />
     </view>
     <view class="section">
       <image class="icon" mode="aspectFit" src="/static/images/login/pass.png"></image> 

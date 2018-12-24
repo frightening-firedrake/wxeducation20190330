@@ -78,17 +78,67 @@ Page({
     if (!this.data.error) {
       var identity = this.data.identity
       var userInfo = app.globalData.userInfo;
-      if (userInfo){
-        console.log(userInfo)
-      }
-      wx.reLaunch({
-        url: '/pages/login/login/login?identity=' + identity
-      })
+      // if (userInfo){
+      //   console.log(userInfo)
+      // }
+      // wx.reLaunch({
+      //   url: '/pages/login/login/login?identity=' + identity
+      // })
       // wx.switchTab({
       //   url: '/pages/home/home'
       // })
-      console.log('form发生了submit事件，携带数据为：', e.detail.value)
+      // console.log('form发生了submit事件，携带数据为：', e.detail.value)
+      var data={};
+      data.account = e.detail.value.user;
+      data.password = e.detail.value.pass;
+      data.weixinNum = userInfo.nickName;
+      data.sex = userInfo.gender == 0 ? '保密':userInfo.gender == 1 ?'男':'女';
+      data.type = this.data.type;
+      data.openId = app.globalData.openId;
+      // data.phoneNum = 12315678945;//假的
+      // data.integral = 999999;//假的
+      // data.singData='';//假的
+      // data.riskAssessment = 0;
+      // console.log(data)
+      this.register(data)
     }
+  },
+  register(data){
+    // this.setData({
+    //   endLoading: true
+    // })
+    var _this = this
+    wx.request({
+      url: app.globalData.apiRoot + app.globalData.api.register,
+      method: 'POST',
+      data: data,
+      header: {
+        // Authorization: app.globalData.Token,//验证登录信息用
+        // 'content-type': 'application/json' // 默认值
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      success(res) {
+        if(res.data.success){
+          wx.showToast({
+            title: res.data.msg,
+            icon: 'success',
+            duration: 2000
+          })
+          wx.reLaunch({
+            url: '/pages/login/login/login?identity=' + _this.data.identity
+          })
+        }else{
+          wx.showToast({
+            title: res.data.msg,
+            icon: 'none',
+            duration: 2000
+          })
+        }
+      },
+      fail(res) {
+
+      }
+    })
   },
   /**
    * 页面的初始数据
@@ -100,6 +150,7 @@ Page({
     pass2: '',
     error: false,
     errormsg: '',
+    type:'',
     // errormsg:'您输入的账号或密码错误，请重新输入！',
   },
 
@@ -109,8 +160,10 @@ Page({
   onLoad: function (options) {
     // console.log(options)
     var identity = options.identity;
+    var type = options.identity=='工号'?2:1;
     this.setData({
-      identity: identity
+      identity: identity,
+      type: type
     })
   },
 

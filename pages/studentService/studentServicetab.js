@@ -92,6 +92,7 @@ Page({
   },
   // 点击标签连接
   taptag(event) {
+    var _this=this;
     var url = event.currentTarget.dataset.tag
     if (url == 'modalqd') {
       if (!app.globalData.is_qiandao) {
@@ -102,14 +103,15 @@ Page({
             "content-type": "application/x-www-form-urlencoded"
           },
           data: {
-            id: 1
+            openId: app.globalData.openId
           },
           success: function (res) {
             if (res.data.integral) {
-              this.setData({
+              _this.setData({
                 modalqd: true,
-                'user.score': score
               })
+              app.globalData.score = res.data.integral;
+              console.log(app.globalData.score, res.data.integral)
               app.globalData.is_qiandao = true;
             } else {
               wx.showToast({

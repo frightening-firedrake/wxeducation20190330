@@ -20,7 +20,7 @@ App({
             'content-type': 'application/json' // 默认值
           },
           success:res=> {
-            this.openId = res.openId
+            this.globalData.openId = res.data
           },
           fail(res) {
 
@@ -52,48 +52,51 @@ App({
   },
   globalData: {
     // apiRoot: 'https://www.baidu.com/',//鬼抽疯了想把api全独立出来管理真是作死
+    apiRoot: 'http://192.168.1.252:8083/educationSystem/',//测试服务器暂用周明坤
     // apiRoot: 'http://192.168.1.252:8083/educationSystem/',//zhoumingkun
-      apiRoot: 'http://192.168.1.253:8080/educationSystem/',//lijianbo
+    // apiRoot: 'http://192.168.1.253:8080/educationSystem/',//lijianbo
     api:{
-      getOpenId:'wechat/getOpenId',
-      ACCESS_TOKEN: "weixinContent/getToken", //获取ACCESS_TOKEN
-      interact: 'weixinContent/getContent',//首页tab校园互动	校园互动获取微信公众号发布的学生文章
-      hot: 'activity/findNew',//首页tab活动动态热门	活动动态最新发布的活动动态显示在首页
-
-      thoughtPoliticalList: 'sizhengjianshe/data',//思政建设列表
+      getOpenId: 'wechat/getOpenId',
+      ACCESS_TOKEN: "wechat/getToken", //获取ACCESS_TOKEN
+      interact: 'wechat/getContent',//首页tab校园互动	校园互动获取微信公众号发布的学生文章
+      hot: 'weixinContent/findNew',//首页tab活动动态热门	活动动态最新发布的活动动态显示在首页
+      register: 'account/save',//注册方法
+      login:'account/loginWX',//登录方法
+      thoughtPoliticalList: 'weixinContent/dataSizheng',//思政建设列表
       // 思政建设列表	思政建设管理发布的文章列表
-      thoughtPoliticalDetails: 'sizhengjianshe/getById',//偏向于通用的文章详情页
+      thoughtPoliticalDetails: 'weixinContent/getSizheng',//偏向于通用的文章详情页
       // 思政建设详情	思政建设管理发布的文章详情（来源阅读次数日期）
-      activity: 'activity/data',//活动动态
+      activity: 'weixinContent/dataActivity',//活动动态
       // 活动动态列表	活动动态管理发布的文章列表
-      activityDetails: 'activity/getById',//活动动态详情
+      activityDetails: 'weixinContent/getActivity',//活动动态详情
       // 活动动态详情	活动动态管理发布的文章详情（来源阅读次数日期）
-      policy: 'zhengcefagui/data',//政策法规
+      policy: 'weixinContent/dataZhengce',//政策法规
       // 政策法规列表	政策法规管理发布的文章列表
-      policyDetails: 'zhengcefagui/getById',//偏向于通用的文章详情页
+      policyDetails: 'weixinContent/getZhengce',//偏向于通用的文章详情页
       // 政策法规详情	政策法规管理发布的文章详情（来源阅读次数日期）
-      rules: 'guizhangzhidu/data',//规章制度
+      rules: 'weixinContent/dataGuizhang',//规章制度
       // 规章制度列表	规章制度管理发布的文章列表
-      rulesDetails: 'guizhangzhidu/getById',//偏向于通用的文章详情页
+      rulesDetails: 'weixinContent/getGuizhang',//偏向于通用的文章详情页
       // 规章制度详情	规章制度管理发布的文章详情（来源阅读次数日期）
-      contactIndex: 'xiaoyuanhuangye/data',//校园黄页
+      contactIndex: 'weixinContent/dataXiaoyuan',//校园黄页
       // 校园黄页第一个页面	显示所有的联系机构
-      contactIndexDetails: 'xiaoyuanhuangye/findAllDepartment',//校园黄页详情
+      contactIndexDetails: 'weixinContent/findAllDepartment',//校园黄页详情
       // 校园黄页第二个页面	显示该机构办公室的所有联系方式
-      whoamI: 'test/data',//认识自我
+      whoamI: 'weixinContent/dataTest',//认识自我
       // 认识自我列表页	所有测试题列表页（有筛选）
-      whoamIabstract: 'test/get',//认识自我摘要大标题
+      whoamIabstract: 'weixinContent/getTest',//认识自我摘要大标题
       // 认识自我某道题页	标题，图片，摘要阅读次数发布时间
-      whoamIMore: 'test/data',//认识自我摘要大标题
+      whoamIMore: 'weixinContent/dataTest',//认识自我摘要大标题
       // 认识自我的列表页	认识自我题简介页面下的其他题
-      whoamItest: 'topic/findTopicAndSingleOption',//认识自我测试题
+      whoamItest: 'weixinContent/findTopicAndSingleOption',//认识自我测试题
       // 认识自我题与选项页面	认识自我题目与选项页面
-      minetab: 'account/getIntegral',//我的tab
+      minetab: 'weixinContent/getIntegralByOpenId',//我的tab 我用到了吗？
       // 当前积分获取	当前积分获取
-      sing:'account/signIn',
+      sing:'weixinContent/signIn',
       // 签到领积分	签到一天只能签到一次
-      ranking:'account/data',
+      ranking:'weixinContent/dataAccount',
       // 积分排行榜	积分排行榜列表学号，微信号，积分
+      getIntegral: 'weixinContent/getIntegralByOpenId',//获取积分
       studentServicetab: 'studentServicetab',//学生服务tab 没用到
       thoughtPolitical: 'thoughtPoliticaltab',//思政建设tab 没用到
       dangfei: 'dangfei',//党费上缴 没用到
@@ -103,7 +106,7 @@ App({
     userInfo: null,
     is_qiandao:false,
     openId:'',
-    score:806,
-    number: 18100320,
+    score:0,
+    number: '',
   }
 })

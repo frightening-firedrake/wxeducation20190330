@@ -12,7 +12,10 @@
     <view class="btnbox one" wx:if="{{(index!==0)&&(index+1!==tests.length)}}">
       <button type="default" class="btn" plain="false" data-index="{{index}}" bindtap="pretest" hover-class="none"> 上一题 </button>
     </view>
-    <view class="btnbox two" wx:if="{{index+1==tests.length}}">
+    <view class="btnbox one" wx:if="{{tests.length==1}}">
+      <button type="default" class="btn" plain="false" bindtap="submit" hover-class="none"> 提交 </button>      
+    </view>
+    <view class="btnbox two" wx:if="{{(index+1==tests.length)&&(tests.length!=1)}}">
       <button type="default" class="btnl" plain="false"  data-index="{{index}}" bindtap="pretest" hover-class="none"> 上一题 </button>
       <button type="default" class="btn" plain="false" bindtap="submit" hover-class="none"> 提交 </button>      
     </view>
