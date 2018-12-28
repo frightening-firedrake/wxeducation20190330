@@ -1,6 +1,6 @@
 <!--pages/login/login/login.wxml-->
 <view class="pageWrap">
-  <image class="logo" mode="aspectFit" src="/static/images/login/logo.png"></image> 
+  <image class="name" mode="aspectFit" src="/static/images/login/name.png"></image> 
   <form bindsubmit="formSubmit" bindreset="formReset">
     <view class="errormsg"><icon  wx:if="{{error}}" type="warn" size="16"/>{{errormsg}}</view>
     <view class="section">
@@ -24,5 +24,6 @@
     </view>
   </form>
 </view>
+<image class="logo" mode="aspectFit" src="/static/images/login/logo.png"></image> 
 <image class="bg" mode="aspectFill" src="/static/images/login/loginbg.jpg"></image> 
 

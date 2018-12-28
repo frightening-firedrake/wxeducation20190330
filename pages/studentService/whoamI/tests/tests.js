@@ -4,12 +4,14 @@ const app = getApp()
 Page({
   // radio事件
   radioChange: function (e) {
-    // console.log(e)
+    console.log(e)
     // console.log(e.currentTarget.dataset.index)//可追溯到第几题
     // console.log('radio发生change事件，携带value值为：', e.detail.value)//该题选值
     var index = e.currentTarget.dataset.index;
-    var value = e.detail.value;
-    this.data.result[index]=value
+    var result = JSON.parse(e.detail.value).result;
+    var rank = JSON.parse(e.detail.value).rank;
+    this.data.result[index] = result
+    this.data.rank[index] = rank
     this.setData({
       result: this.data.result
     })
@@ -59,9 +61,36 @@ Page({
   },
   submit(){
     // console.log(this.data.result)//结果集
+    // console.log(this.data.rank)//结果登记
+    var data={};
+    data.accountId = app.globalData.number;
+    data.testId = this.data.testId;
+    data.rank = this.data.rank;
+    data.type=1;
+    this.submitResult(data)
     // 少个if判断题型暂时只做了单题
     wx.redirectTo ({
       url: '/pages/studentService/whoamI/psychtestResult/psychtestResult?result=' + this.data.result[this.data.result.length - 1] + '&id=' + this.data.testId
+    })
+  },
+  // 提交结果
+  submitResult(data){
+    var _this = this
+    wx.request({
+      url: app.globalData.apiRoot + app.globalData.api.submitResult1,
+      method: 'POST',
+      data: data,
+      header: {
+        // Authorization: app.globalData.Token,//验证登录信息用
+        // 'content-type': 'application/json' // 默认值
+        'content-type': 'application/x-www-form-urlencoded' // 默认值
+      },
+      success(res) {
+
+      },
+      fail(res) {
+
+      },
     })
   },
   // 请求数据测试题的
@@ -95,7 +124,12 @@ Page({
         res.data.singleOption.forEach((value)=>{
           var option={};
           option.label = value.options;
-          option.value = value.result;
+          // option.value = value.result;
+          // option.rank = value.rank;
+          option.value = {};
+          option.value.result = value.result;
+          option.value.rank = value.rank;
+          option.value = JSON.stringify(option.value);
           test.options.push(option);
         })
         _this.data.tests.push(test)
@@ -151,6 +185,7 @@ Page({
     tests:[],
     animationData: [],
     result:[],
+    rank:[],
     testId:'',
   },
 

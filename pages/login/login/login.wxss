@@ -12,13 +12,23 @@
   z-index: -1;
 }
 .pageWrap{
-
+  
 }
-.pageWrap .logo{
+.pageWrap .name{
   display: block;
-  width:750rpx;
-  height:200rpx;
-  margin:80rpx auto 0;
+  width:492rpx;
+  height:111rpx;
+  margin:120rpx auto 50rpx;
+}
+.logo{
+  /* display: block; */
+  position:absolute;
+  bottom:70rpx;
+  left:50%;
+  margin-left:-187.5rpx;
+  width:375rpx;
+  height:100rpx;
+  /* margin:80rpx auto 0; */
 }
 .pageWrap form{
   display: block;
@@ -69,8 +79,11 @@
   font-size: 26rpx;
   color: #666666;
 }
+.pageWrap form .btn-area button.active{
+  color: #2269d4;
+}
 .pageWrap form .btn-area button{
-  width:4em;
+  width:6em;
   font-size: 26rpx;
   color: #666666;
 	height: auto;

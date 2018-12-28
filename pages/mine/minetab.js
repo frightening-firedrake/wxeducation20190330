@@ -85,18 +85,19 @@ Page({
       number: "",
       info: "我是一名优秀的学生！"
     },
-    navlist: [{
-        title: '关于我们',
-        link_type: "path",
-        path: '/pages/mine/minetab',
-        icon: '/static/images/personal/icon1.png'
-      },
-      {
-        title: '常见问题',
-        link_type: "path",
-        path: '/pages/mine/minetab',
-        icon: '/static/images/personal/icon2.png'
-      },
+    navlist: [
+      // {
+      //   title: '关于我们',
+      //   link_type: "path",
+      //   path: '/pages/mine/minetab',
+      //   icon: '/static/images/personal/icon1.png'
+      // },
+      // {
+      //   title: '常见问题',
+      //   link_type: "path",
+      //   path: '/pages/mine/minetab',
+      //   icon: '/static/images/personal/icon2.png'
+      // },
       // { title: '党费上缴', path: '/pages/studentService/dangfei/dangfei', icon: '/static/images/personal/icon3.png' },
       // { title: '团费上缴', path: '/pages/studentService/tuanfei/tuanfei', icon: '/static/images/personal/icon4.png' },
       {
@@ -118,7 +119,7 @@ Page({
         icon: '/static/images/personal/icon5.png'
       },
     ],
-    version: 'V1.20.1',
+    version: 'V1.00',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
@@ -171,13 +172,13 @@ Page({
   */
   onShow: function () {
     
-    if (app.globalData.score) {
-      this.setData({
-        'user.score': app.globalData.score,
-      })
-    } else {
+    // if (app.globalData.score) {
+    //   this.setData({
+    //     'user.score': app.globalData.score,
+    //   })
+    // } else {
       this.getIntegral()
-    }
+    // }
   },
 
   /**

@@ -131,6 +131,7 @@ Page({
           },
           data: {
             openId: app.globalData.openId
+            // openId: undefined
           },
           success: function (res) {
             if (res.data.integral) {

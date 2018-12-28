@@ -52,8 +52,8 @@ App({
   },
   globalData: {
     // apiRoot: 'https://www.baidu.com/',//鬼抽疯了想把api全独立出来管理真是作死
-    apiRoot: 'https://education.ityyedu.com/educationSystem/',//测试服务器
-    // apiRoot: 'http://192.168.1.252:8083/educationSystem/',//zhoumingkun
+    // apiRoot: 'https://education.ityyedu.com/educationSystem/',//测试服务器
+    apiRoot: 'http://192.168.1.252:8083/educationSystem/',//zhoumingkun
     // apiRoot: 'http://192.168.1.253:8080/educationSystem/',//lijianbo
     api:{
       getOpenId: 'wechat/getOpenId',
@@ -90,6 +90,8 @@ App({
       // 认识自我的列表页	认识自我题简介页面下的其他题
       whoamItest: 'weixinContent/findTopicAndSingleOption',//认识自我测试题
       // 认识自我题与选项页面	认识自我题目与选项页面
+      submitResult1: "weixinContent/saveAccountResult",//单题测试结果
+      // 认识自我题与选项页面 单题测试结果
       minetab: 'weixinContent/getIntegralByOpenId',//我的tab 我用到了吗？
       // 当前积分获取	当前积分获取
       sing:'weixinContent/signIn',

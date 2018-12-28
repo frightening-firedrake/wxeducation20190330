@@ -47,6 +47,7 @@ page{
   padding:20rpx;
   color: #333333;
   font-size:24rpx;
+  align-items: center;
 }
 radio{
   margin-right:20rpx;
