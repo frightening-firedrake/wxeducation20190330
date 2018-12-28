@@ -4,7 +4,7 @@ const app = getApp()
 Page({
   // radio事件
   radioChange: function (e) {
-    console.log(e)
+    // console.log(e)
     // console.log(e.currentTarget.dataset.index)//可追溯到第几题
     // console.log('radio发生change事件，携带value值为：', e.detail.value)//该题选值
     var index = e.currentTarget.dataset.index;
@@ -63,7 +63,7 @@ Page({
     // console.log(this.data.result)//结果集
     // console.log(this.data.rank)//结果登记
     var data={};
-    data.accountId = app.globalData.number;
+    data.openId = app.globalData.openId;
     data.testId = this.data.testId;
     data.rank = this.data.rank;
     data.type=1;

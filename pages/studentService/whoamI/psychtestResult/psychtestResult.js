@@ -197,7 +197,7 @@ Page({
   onLoad: function (options) {
     this.getdata(options.id);
     this.setData({
-      type: options.type,
+      // type: options.type,
       id: options.id,
       res: options.result
     })
