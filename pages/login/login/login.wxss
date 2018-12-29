@@ -16,18 +16,18 @@
 }
 .pageWrap .name{
   display: block;
-  width:492rpx;
-  height:111rpx;
-  margin:120rpx auto 50rpx;
+  width:501rpx;
+  height:172rpx;
+  margin:90rpx auto 20rpx;
 }
 .logo{
   /* display: block; */
   position:absolute;
-  bottom:70rpx;
+  bottom:60rpx;
   left:50%;
-  margin-left:-187.5rpx;
-  width:375rpx;
-  height:100rpx;
+  margin-left:-220.5rpx;
+  width:441rpx;
+  height:58rpx;
   /* margin:80rpx auto 0; */
 }
 .pageWrap form{

@@ -107,6 +107,12 @@ Page({
     // this.setData({
     //   endLoading: true
     // })
+    if (!this.data.addLoading){
+      return
+    }
+    this.setData({
+      addLoading: false,
+    })
     var _this = this
     wx.request({
       url: app.globalData.apiRoot + app.globalData.api.register,
@@ -118,16 +124,27 @@ Page({
         'content-type': 'application/x-www-form-urlencoded' // 默认值
       },
       success(res) {
+        
         if(res.data.success){
           wx.showToast({
-            title: res.data.msg,
-            icon: 'success',
+            // title: res.data.msg,
+            title: "注册成功，返回登录页",
+            // icon: 'success',
+            icon: 'none',
             duration: 2000
           })
-          wx.reLaunch({
-            url: '/pages/login/login/login?identity=' + _this.data.identity
-          })
+          setTimeout(function(){
+            _this.setData({
+              addLoading: true,
+            })
+            wx.reLaunch({
+              url: '/pages/login/login/login?identity=' + _this.data.identity
+            })
+          },2000)
         }else{
+          _this.setData({
+            addLoading: true,
+          })
           wx.showToast({
             title: res.data.msg,
             icon: 'none',
@@ -151,6 +168,7 @@ Page({
     error: false,
     errormsg: '',
     type:'',
+    addLoading:true,
     // errormsg:'您输入的账号或密码错误，请重新输入！',
   },
 
