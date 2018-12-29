@@ -61,6 +61,7 @@ Page({
       var data = {};
       data.account = e.detail.value.user;
       data.password = e.detail.value.pass;
+      data.openId = app.globalData.openId;
       // console.log(data)
       this.login(data)
     }

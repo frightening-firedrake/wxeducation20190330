@@ -15,7 +15,7 @@
       <image class="icon" mode="aspectFit" src="/static/images/login/pass.png"></image> 
       <input name="pass2" value="{{pass2}}" bindblur="pass2blur" type="text" bindinput="pass2input" password placeholder="请再次输入您的密码" />
     </view>
-    <button form-type="submit">注册</button>
+    <button loading="{{!addLoading}}" form-type="submit">注册</button>
     <view class="btn-area">
       <view bindtap="toForget"></view>
       <view bindtap="toLogin" class="active">现在登录</view>
