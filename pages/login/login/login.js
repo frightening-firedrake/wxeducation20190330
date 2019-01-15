@@ -3,27 +3,27 @@
 const app = getApp()
 
 Page({
-  toForget(){
+  toForget() {
     return
     var identity = this.data.identity
     wx.navigateTo({
       url: '/pages/login/login/login?identity=' + identity
     })
   },
-  toRegister(){
+  toRegister() {
     var identity = this.data.identity
     wx.navigateTo({
       // url: '/pages/login/register/register?identity=' + identity
       url: '/pages/login/identity/identity'
     })
   },
-  pass1input(e){
+  pass1input(e) {
     // console.log( e.detail.value)
   },
-  userinput(e){
+  userinput(e) {
     // console.log(e.detail.value)
   },
-  formSubmit: function (e) {
+  formSubmit: function(e) {
     // console.log(this.data.hasUserInfo)
     // if (!this.data.hasUserInfo){
     //   this.setData({
@@ -34,13 +34,13 @@ Page({
     // }
     var data = e.detail.value;
     for (var i in data) {
-      if (!data[i]){
-        if(i=="user"){
+      if (!data[i]) {
+        if (i == "user") {
           this.setData({
             error: true,
             errormsg: '请您输入账号，然后再点击登录！',
           })
-        }else if(i=="pass"){
+        } else if (i == "pass") {
           this.setData({
             error: true,
             errormsg: '请您输入密码，然后再点击登录！',
@@ -53,7 +53,7 @@ Page({
       error: false,
       errormsg: '',
     })
-    if(!this.data.error){
+    if (!this.data.error) {
       // wx.switchTab({
       //   url: '/pages/home/home'
       // })
@@ -67,6 +67,7 @@ Page({
     }
   },
   login(data) {
+   
     // this.setData({
     //   endLoading: true
     // })
@@ -107,10 +108,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    identity:'',
-    user:'',
-    pass:'',
-    error:false,
+    identity: '',
+    user: '',
+    pass: '',
+    error: false,
     errormsg: '',
     // errormsg:'您输入的账号或密码错误，请重新输入！',
     userInfo: '',
@@ -118,26 +119,26 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
   },
   // 获取权限方法
-  getUserInfo: function (e) {
+  getUserInfo: function(e) {
     console.log(e)
-    if (e.detail.userInfo){
+    if (e.detail.userInfo) {
       app.globalData.userInfo = e.detail.userInfo
       this.setData({
         userInfo: e.detail.userInfo,
         hasUserInfo: true
       })
       this.toRegister()
-    }else{
+    } else {
 
     }
-    
+
   },
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     // console.log(options)
-    var identity = options.identity ? options.identity:'账号';
+    var identity = options.identity ? options.identity : '账号';
     this.setData({
       identity: identity
     })
@@ -173,49 +174,49 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   }
 })

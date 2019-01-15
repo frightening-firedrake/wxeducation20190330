@@ -116,7 +116,7 @@ Page({
             } else {
               wx.showToast({
                 title: '今日已签到',
-                duration: 2000
+                duration: 1000
               })
               app.globalData.is_qiandao = true;
             }
@@ -125,7 +125,7 @@ Page({
       } else {
         wx.showToast({
           title: '今日已签到',
-          duration: 2000
+          duration: 1000
         })
         app.globalData.is_qiandao = true;
       }

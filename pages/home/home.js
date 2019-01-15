@@ -143,7 +143,7 @@ Page({
             } else {
               wx.showToast({
                 title: '今日已签到',
-                duration: 2000
+                duration: 1000
               })
               app.globalData.is_qiandao = true;
             }
@@ -152,7 +152,7 @@ Page({
       } else {
         wx.showToast({
           title: '今日已签到',
-          duration: 2000
+          duration: 1000
         })
         app.globalData.is_qiandao = true;
       }
@@ -188,7 +188,7 @@ Page({
       mode: 'aspectFit'
     }, 
     taglist1:{
-      title:'xx有话说',
+      title:'小六说事',
       items:[
         { src: '/static/images/home/icon1.png', text: '思政建设', tag: '/pages/xxsaid/thoughtPolitical/thoughtPolitical' },
         { src: '/static/images/home/icon2.png', text: '活动动态', tag: '/pages/xxsaid/activity/activity' },

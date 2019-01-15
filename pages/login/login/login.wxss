@@ -25,8 +25,8 @@
   position:absolute;
   bottom:60rpx;
   left:50%;
-  margin-left:-220.5rpx;
-  width:441rpx;
+  margin-left:-227rpx;
+  width:454rpx;
   height:58rpx;
   /* margin:80rpx auto 0; */
 }

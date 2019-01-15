@@ -31,7 +31,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "六号楼",
+    "navigationBarTitleText": "6号译站",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
@@ -51,7 +51,7 @@
         "pagePath": "pages/xxsaid/thoughtPoliticaltab",
         "iconPath": "/static/images/home/tab02.png",
         "selectedIconPath": "/static/images/home/tab12.png",
-        "text": "思政教育"
+        "text": "小六说事"
       },
       {
         "pagePath": "pages/studentService/studentServicetab",
