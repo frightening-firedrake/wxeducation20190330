@@ -23,7 +23,7 @@
 .pageWrap.contactIndexDetails .bottommsg{
   height:50rpx;
   border-top:1px dotted #939393;
-  font-size:20rpx;
+  font-size:26rpx;
   color: #666666;
   display: flex;
   line-height:50rpx;
@@ -43,7 +43,7 @@
 .pageWrap.details .bottommsg{
   height:50rpx;
   border-top:1px dotted #939393;
-  font-size:20rpx;
+  font-size:26rpx;
   color: #666666;
   display: flex;
   line-height:50rpx;

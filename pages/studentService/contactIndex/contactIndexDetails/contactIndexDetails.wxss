@@ -34,7 +34,7 @@
   line-height:80rpx;
   box-sizing: border-box;
   text-align: center;
-  font-size:24rpx;
+  font-size:28rpx;
   color:#333;
   width:364rpx;
   flex: 0 1 auto;
@@ -45,7 +45,7 @@
   line-height:80rpx;
   box-sizing: border-box;
   text-align: center;
-  font-size:24rpx;
+  font-size:28rpx;
   color:#333;
   width:150rpx;
   flex: 0 1 auto;
@@ -56,7 +56,7 @@
   line-height:80rpx;
   box-sizing: border-box;
   text-align: center;
-  font-size:24rpx;
+  font-size:28rpx;
   color:#333;
   width:193rpx;
   flex: 0 1 auto;
