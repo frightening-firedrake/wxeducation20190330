@@ -24,6 +24,7 @@
            },
            fail(res) {
 
+
            }
          })
          // console.log('启动去取openId',res)
@@ -112,3 +113,4 @@
      number: '',
    }
  })
+

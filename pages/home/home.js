@@ -184,7 +184,7 @@ Page({
     offset: 0,
     count: 10,
     banner: {
-      src: '/static/images/home/banner.jpg',
+      src: '/static/images/home/banner.png',
       mode: 'aspectFit'
     }, 
     taglist1:{
@@ -221,9 +221,9 @@ Page({
   onLoad: function (options) {
     this.getACCESS_TOKEN()
     this.gethotdata()
-    const innerAudioContext = wx.createInnerAudioContext()
-    innerAudioContext.autoplay = true
-    innerAudioContext.src = 'http://dl.stream.qqmusic.qq.com/C400004Sktnw0KnoIF.m4a?guid=7673050330&vkey=735B7E123E636C918C65CC995EEA705401E0E8E1ED1C90CF33831019F65C7814C46FFCEC893D76059FD05D2F561658811FA1A6D1FF2B94C4&uin=0&fromtag=66'
+    // const innerAudioContext = wx.createInnerAudioContext()
+    // innerAudioContext.autoplay = true
+    // innerAudioContext.src = 'http://dl.stream.qqmusic.qq.com/C400004Sktnw0KnoIF.m4a?guid=7673050330&vkey=735B7E123E636C918C65CC995EEA705401E0E8E1ED1C90CF33831019F65C7814C46FFCEC893D76059FD05D2F561658811FA1A6D1FF2B94C4&uin=0&fromtag=66'
   },
 
   /**
