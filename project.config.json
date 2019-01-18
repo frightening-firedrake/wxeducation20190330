@@ -12,7 +12,7 @@
 		"autoAudits": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.3.0",
+	"libVersion": "2.5.0",
 	"appid": "wx6e8430d23cc3e686",
 	"projectname": "wxeducation",
 	"debugOptions": {

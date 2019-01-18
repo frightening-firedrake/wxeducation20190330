@@ -75,7 +75,7 @@ Page({
     rows: 7,
     empty: false,
     banner: {
-      src: '/static/images/thoughtPolitical/fjjy.jpg',
+      src: '/static/images/thoughtPolitical/fjjy.png',
       mode: 'aspectFit'
     },
     xwlbList: [],

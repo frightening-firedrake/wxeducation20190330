@@ -1,15 +1,19 @@
-<!--pages/xxsaid/rules/rules.wxml-->
+<!--pages/xxsaid/activity/activity.wxml-->
 <view class="pageWrap">
   <!-- banner图 -->
   <view class="banner">
     <image mode="{{banner.mode}}" src="{{banner.src}}"></image>
   </view>
   <!-- 新闻类列表 -->
-  <view class="xwlbWrap">
-    <view class="xwlbList" wx:for="{{xwlbList}}" wx:key="{{index}}"  data-id="{{item.id}}" bindtap="tapview">
+  <view class="hddtWrap">
+    <view class="hddtList" wx:for="{{xwlbList}}" wx:key="{{index}}"  data-id="{{item.id}}" bindtap="tapview">
       <view class="content">
-        <text class="point" ></text>
-        <image class="new" wx:if="{{index<3}}" mode="aspectFit" src="/static/images/thoughtPolitical/new.png"></image>
+        <view class="title">
+          <image class="icon" mode="aspectFit" src="/static/images/activity/activityicon.png"></image>
+          <text>{{item.content}}</text>
+          <!-- <text class="solt" wx:if="{{item.content.length >= 18}}">...</text> -->
+          <image class="new" wx:if="{{index<3}}" mode="aspectFit" src="/static/images/thoughtPolitical/new.png"></image>
+        </view>
         {{item.content}}
         <text wx:if="{{item.content.length >= 37}}">...</text>
       </view>

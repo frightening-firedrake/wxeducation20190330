@@ -193,7 +193,7 @@ Page({
         { src: '/static/images/home/icon1.png', text: '思政建设', tag: '/pages/xxsaid/thoughtPolitical/thoughtPolitical' },
         { src: '/static/images/home/icon2.png', text: '活动动态', tag: '/pages/xxsaid/activity/activity' },
         { src: '/static/images/home/icon5.png', text: '政策法规', tag: '/pages/xxsaid/policy/policy' },
-        { src: '/static/images/home/icon6.png', text: '规章制度', tag: '/pages/xxsaid/rules/rules'},
+        { src: '/static/images/home/icon6.png', text: '校园公告', tag: '/pages/xxsaid/rules/rules'},
       ]
     },
     taglist2: {
