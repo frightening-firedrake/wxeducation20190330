@@ -6,6 +6,7 @@
      var logs = wx.getStorageSync('logs') || []
      logs.unshift(Date.now())
      wx.setStorageSync('logs', logs)
+    
      // 登录
      wx.login({
        success: res => {
@@ -52,9 +53,9 @@
      // })
    },
    globalData: {
-    //  apiRoot: 'https://www.baidu.com/',//鬼抽疯了想把api全独立出来管理真是作死
+     //  apiRoot: 'https://www.baidu.com/',//鬼抽疯了想把api全独立出来管理真是作死
      apiRoot: 'https://szyd.xafy.edu.cn/educationSystem/', //测试服务器
-    //  apiRoot: 'http://192.168.1.252:8083/educationSystem/',//zhoumingkun
+     //  apiRoot: 'http://192.168.1.252:8083/educationSystem/',//zhoumingkun
      // apiRoot: 'http://192.168.1.253:8080/educationSystem/',//lijianbo
      api: {
        getOpenId: 'wechat/getOpenId',
@@ -113,4 +114,3 @@
      number: '',
    }
  })
-

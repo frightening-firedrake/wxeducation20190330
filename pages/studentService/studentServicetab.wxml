@@ -18,7 +18,7 @@
   </view>
   <!-- 智慧校园 -->
   <view class="zhxy">
-    <view class="name">智慧校园 <text>移动应用平台</text></view>
+    <view class="name">智慧校园思政建设 <text>移动应用平台</text></view>
     <text class="intro">一个为校园提供信息化服务的平台</text>
   </view>
   <!-- 校园互动 -->

@@ -84,7 +84,7 @@
   padding-left:30rpx;
 }
 .zhxy .name{
-  font-size:36rpx;
+  font-size:30rpx;
   color:#000;
   width:100%;
 }

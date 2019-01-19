@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/login/login/login",
     "pages/home/home",
+    "pages/login/login/login",
     "pages/login/identity/identity",
     "pages/login/register/register",
     "pages/xxsaid/thoughtPoliticaltab",
@@ -35,13 +35,13 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "color":"#c4c4c4",
-    "selectedColor":"#1082ff",
+    "color": "#c4c4c4",
+    "selectedColor": "#1082ff",
     "list": [
       {
         "pagePath": "pages/home/home",
-        "iconPath":"/static/images/home/tab01.png",
-        "selectedIconPath":"/static/images/home/tab11.png",
+        "iconPath": "/static/images/home/tab01.png",
+        "selectedIconPath": "/static/images/home/tab11.png",
         "requiredBackgroundModes": [
           "audio"
         ],
