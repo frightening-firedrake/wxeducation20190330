@@ -55,7 +55,7 @@
    globalData: {
      //  apiRoot: 'https://www.baidu.com/',//鬼抽疯了想把api全独立出来管理真是作死
      apiRoot: 'https://szyd.xafy.edu.cn/educationSystem/', //测试服务器
-     //  apiRoot: 'http://192.168.1.252:8083/educationSystem/',//zhoumingkun
+      // apiRoot: 'http://192.168.1.252:8083/educationSystem/',//zhoumingkun
      // apiRoot: 'http://192.168.1.253:8080/educationSystem/',//lijianbo
      api: {
        getOpenId: 'wechat/getOpenId',
@@ -76,9 +76,9 @@
        // 政策法规列表	政策法规管理发布的文章列表
        policyDetails: 'weixinContent/getZhengce', //偏向于通用的文章详情页
        // 政策法规详情	政策法规管理发布的文章详情（来源阅读次数日期）
-       rules: 'weixinContent/dataGuizhang', //规章制度
+       rules: 'weixinContent/dataNotice', //规章制度
        // 规章制度列表	规章制度管理发布的文章列表
-       rulesDetails: 'weixinContent/getGuizhang', //偏向于通用的文章详情页
+       rulesDetails: 'weixinContent/getNotice', //偏向于通用的文章详情页
        // 规章制度详情	规章制度管理发布的文章详情（来源阅读次数日期）
        contactIndex: 'weixinContent/dataXiaoyuan', //校园黄页
        // 校园黄页第一个页面	显示所有的联系机构
