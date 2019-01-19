@@ -76,10 +76,10 @@
        // 政策法规列表	政策法规管理发布的文章列表
        policyDetails: 'weixinContent/getZhengce', //偏向于通用的文章详情页
        // 政策法规详情	政策法规管理发布的文章详情（来源阅读次数日期）
-       rules: 'weixinContent/dataNotice', //规章制度
-       // 规章制度列表	规章制度管理发布的文章列表
+       rules: 'weixinContent/dataNotice', //校园公告
+       // 校园公告列表	校园公告管理发布的文章列表
        rulesDetails: 'weixinContent/getNotice', //偏向于通用的文章详情页
-       // 规章制度详情	规章制度管理发布的文章详情（来源阅读次数日期）
+       // 校园公告详情	校园公告管理发布的文章详情（来源阅读次数日期）
        contactIndex: 'weixinContent/dataXiaoyuan', //校园黄页
        // 校园黄页第一个页面	显示所有的联系机构
        contactIndexDetails: 'weixinContent/findAllDepartment', //校园黄页详情
