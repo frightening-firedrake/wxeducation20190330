@@ -1,8 +1,9 @@
 {
   "pages": [
-    "pages/home/home",
     "pages/login/login/login",
+    "pages/home/home",
     "pages/login/identity/identity",
+    "pages/login/forget/forget",
     "pages/login/register/register",
     "pages/xxsaid/thoughtPoliticaltab",
     "pages/studentService/studentServicetab",

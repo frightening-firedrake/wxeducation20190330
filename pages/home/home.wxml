@@ -9,7 +9,7 @@
     <view class="tagbox" style="margin-right:16rpx;">
       <view class="title1"><text>—— </text>{{taglist1.title}}<text> ——</text></view>
       <view class="tagWrap">
-        <view wx:for="{{taglist1.items}}" class="tag" wx:key="index" data-tag="{{item.tag}}" bindtap="taptag">
+        <view wx:for="{{taglist1.items}}" class="tag"  hover-class="ui-share-hover" wx:key="index" data-tag="{{item.tag}}" bindtap="taptag">
           <image mode="aspectFit" src="{{item.src}}"></image>
           <text>{{item.text}}</text>
         </view>
@@ -18,7 +18,7 @@
     <view class="tagbox">
       <view class="title1"><text>—— </text>{{taglist2.title}}<text> ——</text></view>
       <view class="tagWrap">
-        <view wx:for="{{taglist2.items}}" class="tag" wx:key="index" data-tag="{{item.tag}}" bindtap="taptag">
+        <view wx:for="{{taglist2.items}}" class="tag"  hover-class="ui-share-hover" wx:key="index" data-tag="{{item.tag}}" bindtap="taptag">
           <image mode="aspectFit" src="{{item.src}}"></image>
           <text>{{item.text}}</text>
         </view>
@@ -40,7 +40,7 @@
   <view class="xyhdWrap">
     <view class="title">校园互动</view>
     <view class="empty" wx:if="{{empty}}">暂无信息</view>
-    <view class="xyhdList" wx:for="{{xyhdList}}" wx:key="index"  data-id="{{item.id}}" bindtap="tapview">
+    <view class="xyhdList" wx:for="{{xyhdList}}" wx:key="index"  hover-class="ui-list-hover" data-id="{{item.id}}" bindtap="tapview">
       <image mode="aspectFit" src="{{item.src}}"></image>
       <view class="content">
         {{item.content}}

@@ -6,7 +6,7 @@
   </view>
   <!-- 新闻类列表 -->
   <view class="hddtWrap">
-    <view class="hddtList" wx:for="{{xwlbList}}" wx:key="{{index}}"  data-id="{{item.id}}" bindtap="tapview">
+    <view class="hddtList" wx:for="{{xwlbList}}" wx:key="{{index}}" hover-class="ui-list-hover" data-id="{{item.id}}" bindtap="tapview">
       <view class="content">
         <view class="title">
           <image class="icon" mode="aspectFit" src="/static/images/activity/activityicon.png"></image>

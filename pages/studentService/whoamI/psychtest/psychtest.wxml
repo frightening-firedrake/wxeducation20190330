@@ -16,7 +16,7 @@
   <!-- 更多测试 -->
   <view class="xlcsWrap">
     <view class="title">更多测试</view>
-    <view class="xlcsList" wx:for="{{xlcsList}}" wx:key="index"  data-id="{{item.id}}" bindtap="tapview">
+    <view class="xlcsList" wx:for="{{xlcsList}}" wx:key="index"  hover-class="ui-list-hover" data-id="{{item.id}}" bindtap="tapview">
       <image mode="aspectFit" src="{{item.src}}"></image>
       <view class="content">
         <view class="header">

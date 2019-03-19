@@ -13,7 +13,7 @@
     </view>
   </view>
   <view class="navlist">
-    <navigator hover-class="none" wx:for="{{navlist}}" class="listitem" wx:key="{{index}}" url="{{item.path}}" data-link_type="{{item.link_type}}" open-type="navigate" bindtap="taptag">
+    <navigator  wx:for="{{navlist}}" class="listitem" wx:key="{{index}}" url="{{item.path}}" data-link_type="{{item.link_type}}" open-type="navigate" bindtap="taptag">
       <image class="icon" mode="aspectFit" src="{{item.icon}}"></image>
       <text>{{item.title}}</text>
       <image class="next" mode="aspectFit" src="/static/images/personal/next.png"></image>

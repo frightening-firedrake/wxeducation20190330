@@ -73,3 +73,10 @@
   line-height:200rpx;
   color: #a6a6a6;
 }
+.ui-share-hover{
+  opacity: 0.9;
+  transform: scale(0.9,0.9);
+}
+.ui-list-hover{
+  background:#eee;
+}

@@ -6,7 +6,7 @@
   </view>
   <!-- 新闻类列表 -->
   <view class="xwlbWrap">
-    <view class="xwlbList" wx:for="{{xwlbList}}" wx:key="{{index}}"  data-id="{{item.id}}" bindtap="tapview">
+    <view class="xwlbList" wx:for="{{xwlbList}}" wx:key="{{index}}" hover-class="ui-list-hover" data-id="{{item.id}}" bindtap="tapview">
       <view class="content">
         <text class="point" ></text>
         <image class="new" wx:if="{{index<3}}" mode="aspectFit" src="/static/images/thoughtPolitical/new.png"></image>

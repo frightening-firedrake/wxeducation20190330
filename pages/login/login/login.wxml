@@ -17,9 +17,10 @@
 
     <view class="btn-area">
       <!-- <view bindtap="toForget">忘记密码</view> -->
-      <view bindtap="toForget"></view>
+      <!-- <view bindtap="toForget"></view> -->
       <!-- <view bindtap="toRegister" class="active">现在注册</view> -->
-      <button class="active" open-type="getUserInfo" bindgetuserinfo="getUserInfo" hover-class="none">现在注册</button>
+      <button bindtap="toForget2" open-type="getUserInfo" bindgetuserinfo="getUserInfo" hover-class="none">忘记密码</button>
+      <button class="active" bindtap="toRegister2" open-type="getUserInfo" bindgetuserinfo="getUserInfo" hover-class="none">现在注册</button>
       <!-- <view bindtap="toRegister" class="active">现在注册</view> -->
     </view>
   </form>

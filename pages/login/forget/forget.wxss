@@ -1,0 +1,103 @@
+/* pages/login/forget/forget.wxss */
+/* page{
+  width:100%;
+  height:100%;
+} */
+.bg{
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index: -1;
+}
+.pageWrap{
+
+}
+/* .pageWrap .logo{
+  display: block;
+  width:750rpx;
+  height:200rpx;
+  margin:80rpx auto 0;
+} */
+.pageWrap .name{
+  display: block;
+  width:501rpx;
+  height:172rpx;
+  margin:90rpx auto 20rpx;
+}
+.logo{
+  /* display: block; */
+  position:absolute;
+  bottom:60rpx;
+  left:50%;
+  margin-left:-220.5rpx;
+  width:441rpx;
+  height:58rpx;
+  /* margin:80rpx auto 0; */
+}
+.pageWrap form{
+  display: block;
+  padding:0 80rpx;
+}
+.pageWrap form .section{
+  height:140rpx;
+  width:auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.pageWrap form .section .icon{
+  width:80rpx;
+  height:80rpx;
+  flex:0 0 auto;
+}
+.pageWrap form .section input{
+  padding-left:14rpx;
+  margin-left:14rpx;
+  height:60rpx;
+  line-height: 60rpx;
+  width:480rpx;
+  color:#333;
+  font-size:36rpx;
+  border-bottom:1px solid #2269d4;
+  flex:1 1 auto;
+}
+.pageWrap form button{
+  width: 100%;
+	height: 76rpx;
+  line-height: 76rpx;
+	background-image: linear-gradient(84deg, 
+		#1b56cc 0%, 
+		#6d76ff 100%);
+  font-size:43rpx;
+  color:#fff;
+  border:none;
+  border-radius:38rpx;
+  margin:40rpx auto;
+}
+.pageWrap form .btn-area{
+  display: flex;
+  justify-content: space-between;
+}
+.pageWrap form .btn-area view{
+  width:6em;
+  font-size: 26rpx;
+  color: #666666;
+}
+.pageWrap form .btn-area view.active{
+  color: #2269d4;
+}
+.errormsg{
+  color: #ea1c25;
+  font-size:24rpx;
+  height:44rpx;
+  /* line-height:44rpx; */
+  /* padding-left:112rpx; */
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.errormsg icon{
+  margin-right:9rpx;
+}

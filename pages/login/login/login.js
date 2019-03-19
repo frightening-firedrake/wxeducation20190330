@@ -4,10 +4,19 @@ const app = getApp()
 
 Page({
   toForget() {
-    return
-    var identity = this.data.identity
+    // var identity = this.data.identity
     wx.navigateTo({
-      url: '/pages/login/login/login?identity=' + identity
+      url: '/pages/login/forget/forget'
+    })
+  },
+  toForget2(){
+    this.setData({
+      action: "toForget",
+    })
+  },
+  toRegister2(){
+    this.setData({
+      action: "toRegiste",
     })
   },
   toRegister() {
@@ -82,13 +91,16 @@ Page({
         'content-type': 'application/x-www-form-urlencoded' // 默认值
       },
       success(res) {
+        // console.log(res)
         if (res.data.success) {
           // wx.showToast({
           //   title: res.data.code,
           //   icon: 'success',
           //   duration: 2000
           // })
+          // 储存账号
           app.globalData.number = data.account
+          // 储存登录标识
           wx.setStorage({
             key: 'logindata',
             data: res.data.success,
@@ -121,17 +133,22 @@ Page({
     userInfo: '',
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    action:'',
   },
   // 获取权限方法
   getUserInfo: function(e) {
-    console.log(e)
     if (e.detail.userInfo) {
       app.globalData.userInfo = e.detail.userInfo
       this.setData({
         userInfo: e.detail.userInfo,
         hasUserInfo: true
       })
-      this.toRegister()
+      // console.log(this.data.action)
+      if (this.data.action =="toRegiste"){
+        this.toRegister()
+      } else if (this.data.action == "toForget"){
+        this.toForget()
+      }
     } else {
 
     }

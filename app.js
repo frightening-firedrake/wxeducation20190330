@@ -3,9 +3,9 @@
    onLaunch: function() {
      console.log('开发文档 https://developers.weixin.qq.com/miniprogram/dev/index.html') //打开控制台连接进入开发文档
      // 展示本地存储能力
-     var logs = wx.getStorageSync('logs') || []
-     logs.unshift(Date.now())
-     wx.setStorageSync('logs', logs)
+    //  var logs = wx.getStorageSync('logs') || []
+    //  logs.unshift(Date.now())
+    //  wx.setStorageSync('logs', logs)
     
      // 登录
      wx.login({
@@ -55,8 +55,8 @@
    },
    globalData: {
      //  apiRoot: 'https://www.baidu.com/',//鬼抽疯了想把api全独立出来管理真是作死
-     apiRoot: 'https://szyd.xafy.edu.cn/educationSystem/', //测试服务器
-      // apiRoot: 'http://192.168.1.252:8083/educationSystem/',//zhoumingkun
+    //  apiRoot: 'https://szyd.xafy.edu.cn/educationSystem/', //测试服务器
+      apiRoot: 'http://192.168.1.244:8083/educationSystem/',//zhoumingkun
      // apiRoot: 'http://192.168.1.253:8080/educationSystem/',//lijianbo
      api: {
        getOpenId: 'wechat/getOpenId',
@@ -65,6 +65,7 @@
        hot: 'weixinContent/findNew', //首页tab活动动态热门	活动动态最新发布的活动动态显示在首页
        register: 'weixinContent/save', //注册方法
        login: 'weixinContent/loginWX', //登录方法
+       resetPass: 'weixinContent/editAccount', //重置密码方法
        thoughtPoliticalList: 'weixinContent/dataSizheng', //思政建设列表
        // 思政建设列表	思政建设管理发布的文章列表
        thoughtPoliticalDetails: 'weixinContent/getSizheng', //偏向于通用的文章详情页
