@@ -1,6 +1,7 @@
 // pages/xxsaid/thoughtPolitical/tab/thoughtPoliticaltab.js
 //获取应用实例
 const app = getApp()
+const util = require('../../utils/util.js')
 Page({
   // 请求数据
   getdata(ACCESS_TOKEN) {
@@ -42,7 +43,7 @@ Page({
         res.data.forEach((value) => {
           var obj = {}
           obj.src = value.thumb_url
-          obj.date = value.createTime
+          obj.date = util.formatTime(new Date(value.update_time * 1000)) 
           obj.content = value.title.substr(0, 25)
           obj.id = value.url
           _this.data.xyhdList.push(obj)
@@ -82,6 +83,7 @@ Page({
       }
     })
   },
+
   // 点击校园互动详情
   tapview(event) {
     var urlStr = event.currentTarget.dataset.id

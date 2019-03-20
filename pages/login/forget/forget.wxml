@@ -17,7 +17,7 @@
     </view>
     <button loading="{{!addLoading}}" form-type="submit">提交</button>
     <view class="btn-area">
-      <view bindtap="toForget"></view>
+      <view bindtap="toRegister">马上注册</view>
       <view bindtap="toLogin" class="active">现在登录</view>
     </view>
   </form>

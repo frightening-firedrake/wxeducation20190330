@@ -55,8 +55,8 @@
    },
    globalData: {
      //  apiRoot: 'https://www.baidu.com/',//鬼抽疯了想把api全独立出来管理真是作死
-    //  apiRoot: 'https://szyd.xafy.edu.cn/educationSystem/', //测试服务器
-      apiRoot: 'http://192.168.1.244:8083/educationSystem/',//zhoumingkun
+     apiRoot: 'https://szyd.xafy.edu.cn/educationSystem/', //服务器
+      // apiRoot: 'https://192.168.1.244:8443/educationSystem/',//zhoumingkun
      // apiRoot: 'http://192.168.1.253:8080/educationSystem/',//lijianbo
      api: {
        getOpenId: 'wechat/getOpenId',

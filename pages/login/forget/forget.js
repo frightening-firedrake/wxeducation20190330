@@ -2,8 +2,10 @@
 //获取应用实例
 const app = getApp()
 Page({
-  toForget() {
-    return
+  toRegister() {
+    wx.navigateTo({
+      url: '/pages/login/identity/identity'
+    })
   },
   toLogin() {
     var identity = this.data.identity
@@ -111,10 +113,12 @@ Page({
     })
     var data2={};
     data2.openId = app.globalData.openId;
-    var params={}
-    params.account = data.account;
-    params.password = data.password;
-    data2.newAccount = JSON.stringify(params);
+    data2.account = data.account;
+    data2.password = data.password;
+    // var params={}
+    // params.account = data.account;
+    // params.password = data.password;
+    // data2.newAccount = JSON.stringify(params);
     var _this = this
     wx.request({
       url: app.globalData.apiRoot + app.globalData.api.resetPass,
@@ -128,30 +132,30 @@ Page({
       success(res) {
 
         if (res.data.success) {
-          // wx.showToast({
-          //   // title: res.data.msg,
-          //   title: "注册成功，返回登录页",
-          //   // icon: 'success',
-          //   icon: 'none',
-          //   duration: 2000
-          // })
-          // setTimeout(function () {
-          //   _this.setData({
-          //     addLoading: true,
-          //   })
-          //   wx.reLaunch({
-          //     url: '/pages/login/login/login?identity=' + _this.data.identity
-          //   })
-          // }, 2000)
+          wx.showToast({
+            // title: res.data.msg,
+            title: "重置成功，请重新登录",
+            // icon: 'success',
+            icon: 'none',
+            duration: 2000
+          })
+          setTimeout(function () {
+            _this.setData({
+              addLoading: true,
+            })
+            // wx.reLaunch({
+            //   url: '/pages/login/login/login?identity=' + _this.data.identity
+            // })
+          }, 2000)
         } else {
-          // _this.setData({
-          //   addLoading: true,
-          // })
-          // wx.showToast({
-          //   title: res.data.msg,
-          //   icon: 'none',
-          //   duration: 2000
-          // })
+          _this.setData({
+            addLoading: true,
+          })
+          wx.showToast({
+            title: res.data.msg,
+            icon: 'none',
+            duration: 2000
+          })
         }
       },
       fail(res) {
