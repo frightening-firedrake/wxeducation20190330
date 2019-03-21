@@ -143,9 +143,9 @@ Page({
             _this.setData({
               addLoading: true,
             })
-            // wx.reLaunch({
-            //   url: '/pages/login/login/login?identity=' + _this.data.identity
-            // })
+            wx.reLaunch({
+              url: '/pages/login/login/login?identity=' + _this.data.identity
+            })
           }, 2000)
         } else {
           _this.setData({

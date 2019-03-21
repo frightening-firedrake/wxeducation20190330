@@ -5,8 +5,8 @@
      // 展示本地存储能力
     //  var logs = wx.getStorageSync('logs') || []
     //  logs.unshift(Date.now())
-    //  wx.setStorageSync('logs', logs)
-    
+    //  wx.setStorageSync('logs', logs)app.globalData.openId
+     
      // 登录
      wx.login({
        success: res => {
@@ -22,6 +22,46 @@
            },
            success: res => {
              this.globalData.openId = res.data
+             wx.getStorage({
+               key: 'logindata',
+               success: res => {
+                 this.globalData.logindata = res.data
+                 if (this.globalData.logindata !== this.globalData.openId) {
+                   wx.showModal({
+                     title: "提示",
+                     content: "您未登录,请登录",
+                     showCancel: false,
+                     confirmColor: "#3cc51f",
+                     success(res) {
+                      //  if (res.confirm) {
+                         wx.reLaunch({
+                           url: "/pages/login/login/login"
+                         })
+                      //  }
+                     }
+                   })
+                 }
+                 //  console.log(this.globalData.logindata)
+               },
+               fail: function (res) {
+                 wx.showModal({
+                   title: "提示",
+                   content: "您未登录,请登录",
+                   showCancel: false,
+                   confirmColor: "#3cc51f",
+                   success(res) {
+                    //  if (res.confirm) {
+                       wx.reLaunch({
+                         url: "/pages/login/login/login"
+                       })
+                    //  }
+                   }
+                 })
+               }
+             })
+            //  console.log(this.globalData.logindata)
+            //  console.log(this.globalData.openId)
+             
            },
            fail(res) {
 
@@ -114,5 +154,6 @@
      openId: '',
      score: 0,
      number: '',
+     logindata:'',
    }
  })

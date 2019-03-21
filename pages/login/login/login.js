@@ -103,7 +103,7 @@ Page({
           // 储存登录标识
           wx.setStorage({
             key: 'logindata',
-            data: res.data.success,
+            data: app.globalData.openId,
           })
           wx.switchTab({
             url: '/pages/home/home'
