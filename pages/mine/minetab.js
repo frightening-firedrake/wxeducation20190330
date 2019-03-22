@@ -119,7 +119,7 @@ Page({
         icon: '/static/images/personal/icon5.png'
       },
     ],
-    version: 'V1.00',
+    version: 'V1.2.0',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
