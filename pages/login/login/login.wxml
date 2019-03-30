@@ -5,7 +5,8 @@
     <view class="errormsg"><icon  wx:if="{{error}}" type="warn" size="16"/>{{errormsg}}</view>
     <view class="section">
       <image class="icon" mode="aspectFit" src="/static/images/login/user.png"></image> 
-      <input name="user" type="text" bindinput="userinput" placeholder="请输入您的{{identity}}"  />
+      <!-- <input name="user" type="text" bindinput="userinput" placeholder="请输入您的{{identity}}"  /> -->
+      <input name="user" type="text" bindinput="userinput" placeholder="请输入您的账号"  />
     </view>
     <view class="section">
       <image class="icon" mode="aspectFit" src="/static/images/login/pass.png"></image> 
@@ -13,7 +14,7 @@
     </view>
     <!-- <open-data id="gender" type="userGender" lang="zh_CN"></open-data> -->
     <!-- <button form-type="submit" open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button> -->
-    <button form-type="submit">登录</button>
+    <button hover-class="ui-share-hover" form-type="submit">登录</button>
 
     <view class="btn-area">
       <!-- <view bindtap="toForget">忘记密码</view> -->

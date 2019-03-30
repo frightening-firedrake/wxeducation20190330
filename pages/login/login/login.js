@@ -76,7 +76,9 @@ Page({
     }
   },
   login(data) {
-
+    wx.showLoading({
+      title: '加载中',
+    })
     // this.setData({
     //   endLoading: true
     // })
@@ -91,6 +93,7 @@ Page({
         'content-type': 'application/x-www-form-urlencoded' // 默认值
       },
       success(res) {
+        wx.hideLoading()
         // console.log(res)
         if (res.data.success) {
           // wx.showToast({

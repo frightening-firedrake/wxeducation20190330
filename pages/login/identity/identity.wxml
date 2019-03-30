@@ -11,7 +11,7 @@
     <image wx:if="{{id=='工号'}}" class="current" mode="aspectFit" src="/static/images/login/current.png"></image>
     <text>我是老师</text>
   </view>
-  <button type="default" class="btnl" plain="false"  bindtap="tologin" hover-class="none"> 下一步 </button>
+  <button type="default" class="btnl" plain="false"  bindtap="tologin" hover-class="ui-share-hover"> 下一步 </button>
 </view>
 <view wx:if="{{modal.show}}" class="mask"></view>
 <view wx:if="{{modal.show}}" class="modal">
@@ -29,5 +29,5 @@
       <text>辅导员</text>
     </view>
   </view>    
-  <button type="default" class="btn" plain="false"  bindtap="tologin" hover-class="none"> 提交职位 </button>  
+  <button type="default" class="btn" plain="false"  bindtap="tologin" hover-class="ui-share-hover"> 提交职位 </button>  
 </view>

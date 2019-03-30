@@ -15,7 +15,7 @@
       <image class="icon" mode="aspectFit" src="/static/images/login/pass.png"></image> 
       <input name="pass2" value="{{pass2}}" bindblur="pass2blur" type="text" bindinput="pass2input" password placeholder="请再次输入您的密码" />
     </view>
-    <button loading="{{!addLoading}}" form-type="submit">提交</button>
+    <button hover-class="ui-share-hover" loading="{{!addLoading}}" form-type="submit">提交</button>
     <view class="btn-area">
       <view bindtap="toRegister">马上注册</view>
       <view bindtap="toLogin" class="active">现在登录</view>
