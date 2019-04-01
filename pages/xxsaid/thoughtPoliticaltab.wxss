@@ -97,6 +97,7 @@
   color: #a6a6a6;
 }
 .xyhdWrap{
+  border: 1px solid white;
   background-color:#fff;
   padding:20rpx 20rpx 0;
 }
