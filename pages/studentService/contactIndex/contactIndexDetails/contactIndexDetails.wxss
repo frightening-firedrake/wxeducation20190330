@@ -31,7 +31,11 @@
 .listWrap .listRow .listcell1{
   border-right:1px solid #c7c7c7;
   height:80rpx;
-  line-height:80rpx;
+  /* line-height:80rpx; */
+  line-height:36rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-sizing: border-box;
   text-align: center;
   font-size:28rpx;
@@ -41,7 +45,10 @@
 }
 .listWrap .listRow .listcell2{
   border-right:1px solid #c7c7c7;
-  height:80rpx;
+  line-height:36rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   line-height:80rpx;
   box-sizing: border-box;
   text-align: center;
@@ -53,7 +60,10 @@
 .listWrap .listRow .listcell3{
   border-right:1px solid #c7c7c7;
   height:80rpx;
-  line-height:80rpx;
+  line-height:36rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-sizing: border-box;
   text-align: center;
   font-size:28rpx;
